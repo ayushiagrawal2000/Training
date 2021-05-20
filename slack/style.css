@@ -1,0 +1,286 @@
+body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+}
+.container{
+    justify-content: space-between;
+    
+}
+.side-bar{
+    width: 250px;
+    height: 100%;
+    display: inline-block;
+    border: 1px solid lightgrey;
+    background-color:#330033;
+    overflow: scroll;
+}
+.chat-body{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    border: 1px solid lightgray;
+    overflow: scroll;
+}
+.profile{
+     display: inline-block; 
+     width: 25%;
+     height: 100%;
+     background-color: rgb(253, 253, 253);
+     border-left: 10x solid lightgray;
+     padding: 10px;
+     vertical-align: top;
+  }
+.side-bar .heading{
+    color: white;
+    margin: 10px;
+}
+.solid-border{
+    border-bottom: 0.01rem solid lightgray;
+}
+i{
+    color:lightgray;
+    font-size: 13px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.channel-heading{
+    color: lightgray;
+    margin: 0 0 10px 10px;
+
+}
+ul{
+    color: lightgray;
+    list-style-type: none;
+}
+ul li{
+    margin-bottom: 5px;
+}
+.user i{
+   margin-top: 10px;
+}
+.user:hover{
+    background-color: #683268;
+}
+.profile .user-details{
+    text-align: center;
+    margin-top: 20px;
+}
+.circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: aliceblue;
+    display: inline-block;
+}
+.circle i{
+    margin: auto;
+    margin-top: 12px;
+    color: black;
+}
+.circle:hover{
+    background-color: rgb(184, 224, 247);
+}
+.chat-pannel{
+    width: 100%;
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.message{
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.example{
+    width: 300px;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.time{
+    color: rgb(53, 49, 49);
+    margin-left: 5px;
+    font-size: 10px;
+}
+.chat-pannel:hover{
+    background-color: aliceblue;
+}
+
+#demo{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    
+    display: inline-block;
+    box-shadow: 10px 10px 5px grey, -2px 2px 3px grey;
+}
+.demo-list li{
+    display: inline;
+    color: black;
+    
+}
+.clearfix{
+    overflow: auto;
+    border: 2px solid rebeccapurple;
+}
+.div1{
+    width: 100px;
+    float: left;
+    height: 100px;
+    border: 2px solid green;
+}
+.div2{
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+    float: right;
+}
+.div3{
+    width: 100px;
+    height: 100px;
+    border: 2px solid green;
+    margin: auto;
+}
+#first_element { 
+  position: relative; 
+  left: 30px; 
+  top: 120px; 
+  width: 500px; 
+  height: 200px;
+  background-color: #fafafa; 
+  border: solid 3px blue; 
+  font-size: 24px; 
+  text-align: center; 
+} 
+#second_element { 
+    position: relative; 
+    width: 500px; 
+    height: 200px;
+    background-color: #fafafa; 
+    border: solid 3px #ff7347; 
+    font-size: 24px; 
+    text-align: center; 
+}
+#fixed{
+  width: 500px;
+  border: 2px solid red;
+  bottom: 0;
+  right: 0;
+  position: fixed;  
+} 
+.parent{
+    width: 200px;
+    height: 100px;
+    border:2px solid rebeccapurple;
+}
+.child{
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+    border:2px solid rebeccapurple;
+}
+#cursor{
+    text-decoration: none;
+    color: rebeccapurple;
+    cursor: pointer;
+}
+section > p{
+    background-color: yellow;
+}
+section ~ p{
+    background-color: aquamarine;
+}
+section + p{
+    background-color: #ff7347;
+}
+a[target="_blank"]{
+    background-color: yellow;
+}
+[title~="home"]{
+    background-color: pink;
+}
+#grad1 {
+    height: 150px;
+    width: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: radial-gradient(rgb(76, 201, 223), rgb(81, 168, 240), rgb(0, 19, 128));
+}
+#grad2{
+    height: 150px;
+    width: 200px;
+    background: linear-gradient(to right,rgb(225, 85, 238),#683268,#330033);
+}
+.column {
+    float: left;
+    width: 25%;
+    
+}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media (max-width: 992px) {
+    .column {
+      width: 50%;
+    }
+}
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px)  {
+    .column {
+      width: 100%;
+    }
+}
+ 
+.transition{
+    transition: width 2s, height 2s, transform 2s;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-bottom: 100px;
+}
+.transition:hover{
+    width: 200px;
+    height: 200px;
+    animation-name: trans-example;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    transform: rotate(180deg);
+}
+@keyframes trans-example{
+    25%{
+         border-radius: 20%;
+    }
+    50%{
+        border-radius: 30%;
+    }
+    100%{
+        border-radius: 50%;
+    }
+}
+.flex-container {
+    display: flex;
+    height: 600px;
+    flex-wrap: wrap;
+    align-content: space-between;
+    background-color: DodgerBlue;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+  }
+  
