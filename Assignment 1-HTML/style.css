@@ -1,16 +1,16 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
 /* start header section */
-.header{
+.header {
     width: 100%;
 }
-.header img{
+.header img {
     width: 10%;
     margin-left: 120px;
 }
-.header p{
+.header p {
     font-size: 11px;
     color: gray;
     vertical-align: top;
@@ -20,27 +20,27 @@ body{
 /* end header section */
 
 /* start main section */
-.main{
+.main {
     width: 100%;
     background-image:linear-gradient(to left, rgba(248, 42, 42, 0.52), rgba(250, 91, 131, 0.73)),url('images/AH-hero-image.png');
     background-position: left ,right ;
 }
-.main-content{
+.main-content {
     text-align: center;
     color: white;
     margin:auto;
     padding: 10px;
 }
-.main-content .heading{
+.main-content .heading {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.main-content .super{
+.main-content .super {
     font-style: italic;
     font-weight: bold;
     font-size: 30px;
 }
-.button{
+.button {
     padding: 7px;
     width: 170px;
     background-color: rgb(16, 182, 16);
@@ -49,127 +49,127 @@ body{
     font-size: large;
     cursor: pointer;
 }
-.main-content i{
+.main-content i {
     display: block;
     font-size: 20px;
     margin-top: 15px;
 }
-.main-content .tag-line{
+.main-content .tag-line {
     margin-top: 0;
     font-size: 20px;
 }
 /* end main section */
 
 /* start registration tool section */
-.registration-tools{
+.registration-tools {
     margin: auto;
     text-align: center;
     width: 55%;
     color: gray;
 }
-.content{
+.content {
     margin: 20px;
     width: 255px;
     display: inline-block;
     
 }
-.content img{
+.content img {
     border-radius: 50%;
     display: inline-block;
     vertical-align: top;
     width: 50px;
 }
-.content .para{
+.content .para {
     display: inline-block;
     width: 200px;
     font-size: 15px;
     text-align: left;
 }
-.content .author{
+.content .author {
     text-align: right;
     padding: 5px;   
 }
 /* end registration tool */
 
 /* start iframe youtube video */
-.video{
+.video {
     padding: 2px;
     text-align: center;
     height: 300px;
     background-color: rgb(36, 148, 240);
 }
-.video p{
+.video p {
     color: white;
     font-size: 20px;
 }
-.video iframe{
+.video iframe {
     width: 270px;
     height: 200px;
 }
 /* end iframe youtube video */
 
 /* start feature section */
-.feature{
+.feature {
     text-align: center;
     width: 50%;
     margin: auto;
     margin-bottom: 20px;
 }
-.feature h3{
+.feature h3 {
     color: rgb(102, 98, 98);
 }
-.feature-content{
+.feature-content {
     width: 250px;
     margin: 20px;
     text-align: center;
     display: inline-block;
 }
-.start-line{
+.start-line {
     color: orangered;
     font-weight: bold;
 }
-.discription{
+.discription {
     color: rgb(102, 98, 98);
 }
 /* end feature section */
 
 /* start network section */
-.network{
+.network {
     background-size: cover;
     background-image:url(images/network.jpg);
     padding: 5px;
     opacity: 70%;
     background-repeat: no-repeat;
 }
-.network h3{
+.network h3 {
     color: rgb(43, 58, 105);
     font-size: 25px;
 }
-.network .network-list{
+.network .network-list {
     margin: auto;
     width: 55%;
 }
 /* end network section */
 
 /* start registration page */
-.registration-page{
+.registration-page {
     background-color: rgb(36, 148, 240);
     color: white;
     padding: 5px;
     height: 500px;
     position: relative;
 }
-.register-heading{
+.register-heading {
     text-align: center;
 }
-.form-container{
+.form-container {
     position: absolute;
     left: 42%;
 }
-.registration-page label{
+.registration-page label {
     font-size: 12px;
 }
-.registration-page form input{
+.registration-page form input {
     display: block;
     padding: 5px;
     border: none;
@@ -177,66 +177,66 @@ body{
     margin: 5px 0px 10px 0px;
     border-radius: 2px;
 }
-.form-container button{
+.form-container button {
     margin-left: 14px;
 }
 /* end registration page */
 
 /* media query for different screen size */
 @media screen and (min-width: 700px) {
-    .main{
+    .main {
         background-size: cover;
     }
-    .registration-tools{
+    .registration-tools {
         width: 65%;
     }
-    .feature{
+    .feature {
         width: 65%;
     }
-    .form-container{
+    .form-container {
         left: 42%;
     }
 }
 @media screen and (max-width:600px) {
-    .header p{
+    .header p {
         margin-top: 0;
         font-size: 7px;
     }
-    .main{
+    .main {
         background-size: cover;
         background-image: linear-gradient(to bottom,rgb(241, 142, 142),rgb(230, 91, 102),rgb(236, 52, 98));
     }
-    .registration-tools{
+    .registration-tools {
         width: 80%;
     }
-    .content{
+    .content {
         margin: auto;
         text-align: center;
     }
-    .content .author{
+    .content .author {
         text-align: center;
         padding: 10px;
     }
-    .feature{
+    .feature {
         width: 80%;
     }
-    .feature-content{
+    .feature-content {
         margin: auto;
         text-align: center;
     }
-    .network .network-list{
+    .network .network-list {
         width: 80%;
     }
     .network-list {
         font-size: 10px;
     }
-    .network{
+    .network {
         background-size: cover;
     }
-    .form-container{
+    .form-container {
         left: 25%;
     }
-    .form-container button{
+    .form-container button {
         margin-left: 9px;
     }
 }
