@@ -1,7 +1,6 @@
 @import "color";
 $font-size:20px;
 body {
-  font-family: sans-serif;
   .container-body {
     background: linear-gradient(to left,rgb(163, 243, 226),rgb(45, 190, 190),rgb(2, 129, 129));
     color: $white;
@@ -106,7 +105,7 @@ body {
         border: 2px solid $white;
       }
     }
-    .Scrollpanel {
+    .scroll-panel{
       height: 0;
       width: 480px;
       position: absolute; 
@@ -147,10 +146,10 @@ body {
         font-size: $font-size;
       }
     }
-    .Scrollpanel #years .year-name:hover {
+    .scroll-panel #years .year-name:hover {
       color: $white;
     }
-    .Scrollpanel #years::-webkit-scrollbar {
+    .scroll-panel #years::-webkit-scrollbar {
       display: none;
     }  
   }
