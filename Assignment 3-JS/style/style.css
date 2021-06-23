@@ -1,31 +1,26 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
 }
-
-html {
-  font-size: 80%;
-}
-
-.container-body {
-  width: 100%;
-  height: 100%;
+body .container-body {
   background: linear-gradient(to left, #a3f3e2, #2dbebe, #028181);
   color: white;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* The sidepanel links */
-  /* When you mouse over the navigation links, change their color */
 }
-.container-body .calender {
-  width: 460px;
+body .container-body .calender {
+  width: 480px;
   background-color: #00001a;
   box-shadow: 5px 5px 10px black;
 }
-.container-body .calender .month {
-  height: 20%;
+@media screen and (max-width: 768px) {
+  body .container-body .calender {
+    width: 320px;
+  }
+}
+body .container-body .calender .month {
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,33 +28,37 @@ html {
   padding: 0 20px;
   border-bottom: 2px solid #00e6b8;
 }
-.container-body .calender .month i {
+@media screen and (max-width: 768px) {
+  body .container-body .calender .month {
+    height: 100px;
+  }
+}
+body .container-body .calender .month i {
   font-size: 20px;
   cursor: pointer;
   color: #00e6b8;
 }
-.container-body .calender .month .date .month-name, .container-body .calender .current-year-name {
+body .container-body .calender .month .month-name,
+body .container-body .calender .month .current-year-name {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 30px;
   color: #00e6b8;
   cursor: pointer;
 }
-.container-body .calender .week-days {
+body .container-body .calender .week-days {
   display: flex;
   padding: 20px 0px;
 }
-.container-body .calender .week-days div {
-  width: calc(460px/8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body .container-body .calender .week-days .week-day-name {
+  width: 60px;
+  text-align: center;
 }
-.container-body .calender .days-container {
+body .container-body .calender .days-container {
   display: flex;
 }
-.container-body .calender .days-container #week-number .week {
-  width: 57.5px;
+body .container-body .calender .days-container #week-number .week {
+  width: 60px;
   height: 60px;
   color: #34b7eb;
   display: flex;
@@ -67,162 +66,126 @@ html {
   align-items: center;
   box-sizing: border-box;
 }
-.container-body .calender .days {
+@media screen and (max-width: 768px) {
+  body .container-body .calender .days-container #week-number .week {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .container-body .calender .days {
   display: flex;
   flex-wrap: wrap;
-  width: 403.3px;
+  text-align: center;
+  width: 420px;
 }
-.container-body .calender .days div {
-  width: calc(402.5px/7);
+body .container-body .calender .days .number-of-days {
+  width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px 5px #302f2f;
+  text-shadow: 2px 2px 5px #464646;
 }
-.container-body .calender .prev-days, .container-body .calender .next-days {
+@media screen and (max-width: 768px) {
+  body .container-body .calender .days .number-of-days {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .container-body .calender .prev-days, body .container-body .calender .next-days {
   opacity: 0.3;
 }
-.container-body .calender .sunday {
-  color: #fa642d;
+body .container-body .calender .sunday {
+  color: orangered;
 }
-.container-body .calender .event {
+body .container-body .calender .event {
   border-radius: 50%;
   border: 2px solid red;
   box-sizing: border-box;
   color: red;
 }
-.container-body .calender .today {
+body .container-body .calender .today {
   border: 2px solid #00e6b8;
   box-sizing: border-box;
 }
-.container-body .calender .days div:hover:not(.week-number):not(.event) {
+body .container-body .calender .days .number-of-days:hover:not(.week-number):not(.event) {
   box-sizing: border-box;
   border: 2px solid white;
 }
-.container-body .sidepanel {
+body .container-body .Scrollpanel {
   height: 0;
-  width: 460px;
-  /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
+  width: 480px;
+  position: absolute;
   z-index: 1;
-  /* Stay on top */
   background-color: #00001a;
-  /* Black*/
   transition: 0.5s;
   overflow: hidden;
-  box-shadow: 5px 5px 5px #353535;
+  box-shadow: 5px 5px 5px #464646;
   text-align: center;
   transform: scaleX(1);
 }
-.container-body .sidepanel #years {
+@media screen and (max-width: 768px) {
+  body .container-body .Scrollpanel {
+    width: 320px;
+  }
+}
+body .container-body .Scrollpanel #years {
   overflow: hidden;
   scroll-behavior: smooth;
   z-index: 1;
-  text-decoration: none;
   font-size: 18px;
-  color: #818181;
+  color: #464646;
   transition: 0.3s;
   cursor: pointer;
-  height: 115px;
+  height: 80px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  box-sizing: border-box;
 }
-.container-body .sidepanel #icon1 .next {
-  margin: 0;
-  padding: 0;
-}
-.container-body .sidepanel #icon1, .container-body #icon2 {
-  font-size: 20px;
-}
-.container-body .sidepanel #years .year-name {
-  width: calc(460px/5);
-  height: calc(115px/2);
+body .container-body .Scrollpanel #years .year-name {
+  width: 96px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container-body .sidepanel #years div:hover {
-  color: #f1f1f1;
+@media screen and (max-width: 768px) {
+  body .container-body .Scrollpanel #years .year-name {
+    width: 64px;
+  }
 }
-.container-body .sidepanel #years::-webkit-scrollbar {
-  display: none;
-}
-
-.modal {
-  top: 10%;
-}
-.modal .modal-dialog {
-  color: #00e6b8;
-  box-shadow: 5px 5px 10px black;
-}
-.modal .modal-dialog .modal-header {
-  display: block;
-}
-.modal .modal-dialog .modal-content {
-  background-color: #00001a;
-}
-.modal .modal-dialog .modal-content .modal-body p {
-  letter-spacing: 1px;
-  line-height: 30px;
-}
-.modal .modal-dialog .modal-content #modal-title {
+body .container-body .Scrollpanel #icon1,
+body .container-body .Scrollpanel #icon2 {
   font-size: 20px;
 }
-
-@media screen and (max-width: 700px) {
-  .container-body {
-    width: 100%;
-  }
-  .container-body .calender {
-    width: 300px;
-  }
-  .container-body .calender .month {
-    height: 15%;
-  }
-  .container-body .calender .month .date .month-name, .container-body .calender .month .date .current-year-name {
-    font-size: 25px;
-  }
-  .container-body .calender .days-container #week-number .week {
-    width: 37.5px;
-    height: 30px;
-  }
-  .container-body .calender .days div {
-    width: calc(262.5px/7);
-    height: 30px;
-  }
-  .container-body .sidepanel {
-    width: 300px;
-  }
-  .container-body .sidepanel #years {
-    height: 80px;
-  }
-  .container-body .sidepanel #years .year-name {
-    width: calc(300px/5);
-    height: 40px;
-    font-size: 15px;
-  }
-  .container-body .modal {
+body .container-body .Scrollpanel #years .year-name:hover {
+  color: white;
+}
+body .container-body .Scrollpanel #years::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  body .modal {
     width: 80%;
     top: 10%;
     left: 10%;
   }
 }
-@media screen and (min-width: 768px) {
-  .container-body .calender .month {
-    height: 15%;
-  }
-  .container-body .calender .sidepanel #years {
-    height: 160px;
-  }
-  .container-body .calender .sidepanel #years .year-name {
-    width: calc(460px/5);
-    height: 80px;
-    font-size: 25px;
-  }
+body .modal .modal-dialog {
+  color: #00e6b8;
+  box-shadow: 5px 5px 10px black;
+}
+body .modal .modal-dialog .modal-header {
+  display: block;
+}
+body .modal .modal-dialog .modal-content {
+  background-color: #00001a;
+}
+body .modal .modal-dialog .modal-content .modal-body p {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+body .modal .modal-dialog .modal-content #modal-title {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
