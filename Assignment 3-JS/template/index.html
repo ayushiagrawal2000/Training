@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container-body">
+    <div class="calender">
+      <div id="myScrollpanel" class="scroll-panel">
+        <div id="icon1"><i class="fas fa-angle-up"></i></div>
+        <div id="years">
+        </div>
+        <div id="icon2"><i class="fas fa-angle-down down-arrow"></i></div>
+      </div>
+      <div class="month">
+        <i class="fas fa-angle-left prev"></i>
+        <div class="date">
+          <div class="month-name"></div>
+          <div class="current-year-name" onclick="Years()"></div>
+        </div>
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="week-days" onclick="closeNav()">
+          <div class="week week-day-name">Week</div>
+          <div class="week-day-name">Sun</div>
+          <div class="week-day-name">Mon</div>
+          <div class="week-day-name">Tue</div>
+          <div class="week-day-name">Wed</div>
+          <div class="week-day-name">Thu</div>
+          <div class="week-day-name">fri</div>
+          <div class="week-day-name">Sat</div>
+      </div>
+      <div class="days-container" onclick="closeNav()">
+        <div id="week-number">
+        </div>
+        <div class="days">
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal fade " role="dialog">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div id="modal-title"></div><br>
+            <div id="event-date"></div>
+          </div>
+          <div class="modal-body">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="../script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+body {
+  font-family: sans-serif;
+}
+body .container-body {
+  background: linear-gradient(to left, #a3f3e2, #2dbebe, #028181);
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container-body .calender {
+  width: 480px;
+  background-color: #00001a;
+  box-shadow: 5px 5px 10px black;
+}
+@media screen and (max-width: 768px) {
+  body .container-body .calender {
+    width: 320px;
+  }
+}
+body .container-body .calender .month {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  border-bottom: 2px solid #00e6b8;
+}
+@media screen and (max-width: 768px) {
+  body .container-body .calender .month {
+    height: 100px;
+  }
+}
+body .container-body .calender .month i {
+  font-size: 20px;
+  cursor: pointer;
+  color: #00e6b8;
+}
+body .container-body .calender .month .month-name,
+body .container-body .calender .month .current-year-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: #00e6b8;
+  cursor: pointer;
+}
+body .container-body .calender .week-days {
+  display: flex;
+  padding: 20px 0px;
+}
+body .container-body .calender .week-days .week-day-name {
+  width: 60px;
+  text-align: center;
+}
+body .container-body .calender .days-container {
+  display: flex;
+}
+body .container-body .calender .days-container #week-number .week {
+  width: 60px;
+  height: 60px;
+  color: #34b7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  body .container-body .calender .days-container #week-number .week {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .container-body .calender .days {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 420px;
+}
+body .container-body .calender .days .number-of-days {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 5px #464646;
+}
+@media screen and (max-width: 768px) {
+  body .container-body .calender .days .number-of-days {
+    width: 40px;
+    height: 40px;
+  }
+}
+body .container-body .calender .prev-days, body .container-body .calender .next-days {
+  opacity: 0.3;
+}
+body .container-body .calender .sunday {
+  color: orangered;
+}
+body .container-body .calender .event {
+  border-radius: 50%;
+  border: 2px solid red;
+  box-sizing: border-box;
+  color: red;
+}
+body .container-body .calender .today {
+  border: 2px solid #00e6b8;
+  box-sizing: border-box;
+}
+body .container-body .calender .days .number-of-days:hover:not(.week-number):not(.event) {
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+body .container-body .Scrollpanel {
+  height: 0;
+  width: 480px;
+  position: absolute;
+  z-index: 1;
+  background-color: #00001a;
+  transition: 0.5s;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #464646;
+  text-align: center;
+  transform: scaleX(1);
+}
+@media screen and (max-width: 768px) {
+  body .container-body .Scrollpanel {
+    width: 320px;
+  }
+}
+body .container-body .Scrollpanel #years {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  z-index: 1;
+  font-size: 18px;
+  color: #464646;
+  transition: 0.3s;
+  cursor: pointer;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .container-body .Scrollpanel #years .year-name {
+  width: 96px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  body .container-body .Scrollpanel #years .year-name {
+    width: 64px;
+  }
+}
+body .container-body .Scrollpanel #icon1,
+body .container-body .Scrollpanel #icon2 {
+  font-size: 20px;
+}
+body .container-body .Scrollpanel #years .year-name:hover {
+  color: white;
+}
+body .container-body .Scrollpanel #years::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  body .modal {
+    width: 80%;
+    top: 10%;
+    left: 10%;
+  }
+}
+body .modal .modal-dialog {
+  color: #00e6b8;
+  box-shadow: 5px 5px 10px black;
+}
+body .modal .modal-dialog .modal-header {
+  display: block;
+}
+body .modal .modal-dialog .modal-content {
+  background-color: #00001a;
+}
+body .modal .modal-dialog .modal-content .modal-body p {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+body .modal .modal-dialog .modal-content #modal-title {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

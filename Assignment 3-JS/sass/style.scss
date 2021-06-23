@@ -1,0 +1,182 @@
+@import "color";
+$font-size:20px;
+body {
+  .container-body {
+    background: linear-gradient(to left,rgb(163, 243, 226),rgb(45, 190, 190),rgb(2, 129, 129));
+    color: $white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .calender { 
+      width: 480px;
+      background-color: $background-color;   
+      box-shadow: 5px 5px 10px $black;
+      @media screen and (max-width:768px) {
+        width: 320px;
+      }
+      .month {
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        border-bottom: 2px solid $aqua-green;
+        @media screen and (max-width:768px) {
+          height: 100px;
+        }
+        i {
+          font-size: $font-size;
+          cursor: pointer;
+          color: $aqua-green;
+        }
+        .month-name,
+        .current-year-name {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 30px;
+          color: $aqua-green;
+          cursor: pointer;
+        }
+      }
+      .week-days {
+        display: flex;
+        padding: 20px 0px;
+      }
+      .week-days .week-day-name {
+        width: 60px;
+        text-align: center;
+      }
+      .days-container {
+        display: flex;
+        #week-number{
+          .week {
+            width: 60px;
+            height: 60px;
+            color: $light-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            @media screen and (max-width:768px) {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+      .days {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width:420px;
+      }
+      .days .number-of-days {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        text-shadow: 2px 2px 5px $text-shadow;
+        @media screen and (max-width:768px) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .prev-days,.next-days {
+        opacity: 0.3;
+      }
+      .sunday {
+        color: $orange-red;
+      }
+      .event {
+        border-radius: 50%;
+        border: 2px solid $red;
+        box-sizing: border-box;
+        color: $red;
+      }
+      .today {
+        border: 2px solid $aqua-green;
+        box-sizing: border-box;
+      }
+      .days .number-of-days:hover:not(.week-number):not(.event){
+        box-sizing: border-box;
+        border: 2px solid $white;
+      }
+    }
+    .scroll-panel{
+      height: 0;
+      width: 480px;
+      position: absolute; 
+      z-index: 1; 
+      background-color: #00001a; 
+      transition: 0.5s;
+      overflow: hidden;
+      box-shadow: 5px 5px 5px $text-shadow;
+      text-align: center;
+      transform: scaleX(1);
+      @media screen and (max-width:768px) {
+        width: 320px;
+      }
+      #years {
+        overflow: hidden;
+        scroll-behavior: smooth;
+        z-index: 1;
+        font-size: 18px;
+        color: $text-shadow;
+        transition: 0.3s;
+        cursor: pointer;
+        height: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        .year-name {
+          width: 96px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @media screen and (max-width:768px) {
+            width: 64px;
+          }
+        }
+      }
+      #icon1,
+      #icon2 {
+        font-size: $font-size;
+      }
+    }
+    .scroll-panel #years .year-name:hover {
+      color: $white;
+    }
+    .scroll-panel #years::-webkit-scrollbar {
+      display: none;
+    }  
+  }
+  .modal {
+    @media screen and (max-width:768px) {
+      width: 80%;
+      top: 10%;
+      left: 10%;
+    }
+    .modal-dialog {
+      color: $aqua-green;
+      box-shadow: 5px 5px 10px $black;
+      .modal-header {
+        display: block;
+      }
+      .modal-content {
+        background-color: $background-color;
+        .modal-body {
+          p {
+            letter-spacing: 1px;
+            line-height: 30px;
+          }
+        }
+        #modal-title {
+          font-size: $font-size;
+        }
+      }
+    }
+  }  
+}
