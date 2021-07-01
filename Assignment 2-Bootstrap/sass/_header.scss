@@ -1,11 +1,8 @@
 .header-container {
     padding: 20px 0px;
-    .header-logo {
-           margin-top:10px;
-    }
+    width: 80%;
 }
 .navbar {
-    width: 100%;
     padding: 15px;
     margin: 0;
     box-shadow: 5px 0px 10px lightgray;
@@ -19,6 +16,11 @@
                 }
             }
         }
+    }
+}
+.navbar-brand {
+    img {
+        display: none;
     }
 }
 .trending-container {
@@ -64,6 +66,7 @@
         padding: 0;
         img {
             height: 100%;
+            display: block;
         }
     }
     .trending-container {
@@ -73,7 +76,13 @@
         }
     }
 }
-@media screen and (min-width:700px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .header-container {
+        width: 90%;
+        .header-card {
+            margin-top: 20px;
+        }
+    }
     .navbar-brand {
        img {
            display: none;
@@ -85,7 +94,6 @@
     .trending-container {
         .effect {
             padding: 0;
-            margin-top: 25px;
         }
     }
 }
