@@ -1,6 +1,3 @@
-body {
-  font-family: sans-serif;
-}
 body .container-body {
   background: linear-gradient(to left, #a3f3e2, #2dbebe, #028181);
   color: white;
@@ -112,7 +109,7 @@ body .container-body .calender .days .number-of-days:hover:not(.week-number):not
   box-sizing: border-box;
   border: 2px solid white;
 }
-body .container-body .Scrollpanel {
+body .container-body .scroll-panel {
   height: 0;
   width: 480px;
   position: absolute;
@@ -125,11 +122,11 @@ body .container-body .Scrollpanel {
   transform: scaleX(1);
 }
 @media screen and (max-width: 768px) {
-  body .container-body .Scrollpanel {
+  body .container-body .scroll-panel {
     width: 320px;
   }
 }
-body .container-body .Scrollpanel #years {
+body .container-body .scroll-panel #years {
   overflow: hidden;
   scroll-behavior: smooth;
   z-index: 1;
@@ -141,7 +138,7 @@ body .container-body .Scrollpanel #years {
   display: flex;
   flex-wrap: wrap;
 }
-body .container-body .Scrollpanel #years .year-name {
+body .container-body .scroll-panel #years .year-name {
   width: 96px;
   height: 40px;
   display: flex;
@@ -149,18 +146,18 @@ body .container-body .Scrollpanel #years .year-name {
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  body .container-body .Scrollpanel #years .year-name {
+  body .container-body .scroll-panel #years .year-name {
     width: 64px;
   }
 }
-body .container-body .Scrollpanel #icon1,
-body .container-body .Scrollpanel #icon2 {
+body .container-body .scroll-panel #icon1,
+body .container-body .scroll-panel #icon2 {
   font-size: 20px;
 }
-body .container-body .Scrollpanel #years .year-name:hover {
+body .container-body .scroll-panel #years .year-name:hover {
   color: white;
 }
-body .container-body .Scrollpanel #years::-webkit-scrollbar {
+body .container-body .scroll-panel #years::-webkit-scrollbar {
   display: none;
 }
 @media screen and (max-width: 768px) {

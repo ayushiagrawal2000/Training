@@ -26,7 +26,7 @@ function closeNav() {
 
 $(document).ready(function() {
   Date.prototype.getWeek = function (dowOffset) {
-    dowOffset = typeof(dowOffset) == 'number' ? dowOffset : 0; 
+    dowOffset = typeof(dowOffset) == 'number' ? dowOffset : 0; //dowoffset is the day from 0 - 6
     var newYear = new Date(this.getFullYear(),0,1);
     var day = newYear.getDay() - dowOffset; 
     day = (day >= 0 ? day : day + 7);
@@ -183,21 +183,35 @@ $(document).ready(function() {
     const nextDays = 7 - lastDaysIndex - 1;//calculate the starting days of next month
     
     const prevLastDays = new Date(year,month,0).getDate();//get the last days of previous month
-    
-    //get the week number at first date of a month
-    var dateinput1 = new Date(year,month,1);
-    var weekOfStartDate = new Date(dateinput1.getFullYear(),dateinput1.getMonth(),dateinput1.getDate());
-    var startDate = weekOfStartDate.getWeek();
-  
-    //get the week number at last date of a month
-    var dateinput2 = new Date(year,month + 1, 0)
-    var weekOfEndDate = new Date(dateinput2.getFullYear(),dateinput2.getMonth(),dateinput2.getDate());
-    var endDate = weekOfEndDate.getWeek();
-  
-    let week = "";
-    for(let j = startDate; j <= endDate; j++) { 
-      week += `<div class="week">${j}</div>`;
+    //to get the week number on every end date of a week in a month
+    var weeks = [],
+    firstDate = new Date(year, month, 1),
+    lastDate = new Date(year, month + 1, 0),
+    numDays = lastDate.getDate();
+
+    let dayOfWeekCounter = firstDate.getDay();
+
+    for (let date = 1; date <= numDays; date++) {
+      if (dayOfWeekCounter === 0 || weeks.length === 0) {
+        weeks.push([]);
+      }
+      weeks[weeks.length - 1].push(date);
+      dayOfWeekCounter = (dayOfWeekCounter + 1) % 7;
     }
+    var result = weeks
+    .filter((w) => !!w.length)
+    .map((w) => ({
+      start: w[0],
+      end: w[w.length - 1],
+      dates: w,
+    }));
+    let week = "";
+    for(let j in result) {
+      var endDateofWeeks = result[j].end;
+      var checkWeekNum = new Date(year,month,endDateofWeeks);
+      var arr = [checkWeekNum.getWeek()];
+      week += `<div class="week">${arr}</div>`;
+    } 
     weekDays.innerHTML = week;
   
     monthDays.innerHTML = "";
@@ -213,45 +227,43 @@ $(document).ready(function() {
     //set the current month days
     for(let i = 1; i <= lastDay; i++) {
       var daysDiv = document.createElement('div');
-        var newDate = new Date(year,month,i);
-        console.log(newDate);
-        var result;
-        var isEventPresent = false;
-        for(let j in events) {
-          result = j.split("-");
-          var fristString = result[0];
-          var secondString = result[1];
-          if (monthArray[month] == fristString && i == parseInt(secondString)) {
-            console.log(events[j].title);
-            isEventPresent = true;
-            break;
-          }
+      var newDate = new Date(year,month,i);
+      var result;
+      var isEventPresent = false;
+      for(let j in events) {
+        result = j.split("-");
+        var fristString = result[0];
+        var secondString = result[1];
+        if (monthArray[month] == fristString && i == parseInt(secondString)) {
+          isEventPresent = true;
+          break;
         }
-        if (newDate.getDay()==0) {   //if Sunday
-          var daysDiv = document.createElement('div');
-          daysDiv.classList.add('number-of-days');
-          var text = document.createTextNode(i);
-          daysDiv.appendChild(text);
-          daysDiv.classList.add('sunday');
-          monthDays.appendChild(daysDiv);
-        } else if (newDate.getDate() == currentDate && newDate.getMonth() == currentMonth) {
-          var daysDiv = document.createElement('div');
-          daysDiv.classList.add('number-of-days');
-          var text = document.createTextNode(i);
-          daysDiv.appendChild(text);
-          daysDiv.classList.add('today');
-          monthDays.appendChild(daysDiv);
-        } else {
-          var daysDiv = document.createElement('div');
-          var text = document.createTextNode(i);
-          daysDiv.classList.add('number-of-days');
-          daysDiv.appendChild(text);
-          monthDays.appendChild(daysDiv);
-        }
-        if(isEventPresent) {
-          daysDiv.classList.add('event');
-          daysDiv.setAttribute('data',fristString+"-"+secondString);
-        }
+      }
+      if (newDate.getDay()==0) {   //if Sunday
+        var daysDiv = document.createElement('div');
+        daysDiv.classList.add('number-of-days');
+        var text = document.createTextNode(i);
+        daysDiv.appendChild(text);
+        daysDiv.classList.add('sunday');
+        monthDays.appendChild(daysDiv);
+      } else if (newDate.getDate() == currentDate && newDate.getMonth() == currentMonth) {
+        var daysDiv = document.createElement('div');
+        daysDiv.classList.add('number-of-days');
+        var text = document.createTextNode(i);
+        daysDiv.appendChild(text);
+        daysDiv.classList.add('today');
+        monthDays.appendChild(daysDiv);
+      } else {
+        var daysDiv = document.createElement('div');
+        var text = document.createTextNode(i);
+        daysDiv.classList.add('number-of-days');
+        daysDiv.appendChild(text);
+        monthDays.appendChild(daysDiv);
+      }
+      if(isEventPresent) {
+        daysDiv.classList.add('event');
+        daysDiv.setAttribute('data',fristString+"-"+secondString);
+      }
     } 
     //set the starting days of next month
     for(let y = 1; y <=  nextDays; y++) { 
@@ -263,14 +275,14 @@ $(document).ready(function() {
       monthDays.appendChild(daysDiv);
     }   
   }
-    monthDays.addEventListener('click', (eve) => {
-      var target = eve.target;
-      var data = target.getAttribute('data');
-      for(let k in events) {
-        if (k == data) {
-          triggerModal(events[k]);
-        }
+  monthDays.addEventListener('click', (eve) => {
+    var target = eve.target;
+    var data = target.getAttribute('data');
+    for(let k in events) {
+      if (k == data) {
+        triggerModal(events[k]);
       }
+    }
   });
   //click on years
   document.getElementById('years').addEventListener("click", (eve) => {
