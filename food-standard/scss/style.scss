@@ -9,47 +9,58 @@
         background-color: $strip-black;
         color: $font-color;
         font-size: $font-size;
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 500px) {
             padding: 10px 20px;
             font-size: 12px;
         }
     }
     .paragraph {
        text-align: center;
-       padding: 10px $padding-left;
+       padding: 40px $padding-left;
        font-style: italic;
        font-size: $font-size;
-       @media screen and (max-width: 400px) {
-           padding: 10px 20px;
+       line-height: 30px;
+       @media screen and (max-width: 500px) {
+           padding: 20px 20px;
+           line-height: 20px;
+           text-align: left;
+           background: $background;
            font-size: 12px;
        }
     }
     .tabs-icon {
-        padding: 30px;
-        margin: 30px 55px;
-        @media screen and (max-width: 400px) {
-            margin: 0px;
+        margin-bottom: 40px;
+        display: flex;
+        padding: 0px 130px;
+        justify-content: space-between;
+        @media screen and (max-width: 500px) {
+            margin: 25px;
+            display: block;
+            padding: 0px;
         }
         div {
-            width: 200px;
-            height: 120px;
-            margin-left: 60px;
-            border: 2px solid $border-dark;
+            width: 180px;
+            height: 180px;
+            border: 5px solid $border-dark;
             text-align: center;
-            @media screen and (max-width: 400px) {
-                width: 120px;
-                height: 80px;
-                margin: 0px 0px 15px 15px;
+            @media screen and (max-width: 500px) {
+                width: 140px;
+                height: 140px;
+                margin: 0px 0px 10px 10px;
             }
             i {
                 color: $strip-black;
-                margin-top: 10px;
+                margin-top: 40px;
                 font-size: 60px;
+                @media screen and (max-width: 500px) {
+                    margin-top: 25px;
+                    font-size: 50px;
+                }
             }
             p {
                 font-weight: bold;
                 margin-top: 10px;
-                @media screen and (max-width: 400px) {
+                @media screen and (max-width: 500px) {
                     font-size: 8px;
                 }
             }
