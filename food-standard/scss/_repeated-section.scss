@@ -1,0 +1,19 @@
+@import "_variables";
+.section-container {
+    padding: $padding-left $padding-left 0px;
+    .row {
+        margin: 0;
+    }
+    .chart-title {
+        background-color: $strip-black;
+        color: $font-color;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .description {
+       background: $background;
+       padding: 20px;
+    }
+}

@@ -1,0 +1,75 @@
+@import "_header";
+@import "_progress-bar";
+@import "_repeated-section";
+@import "_chart-section";
+@import "_variables";
+.dream-container {
+    .main-title {
+        padding: 10px $padding-left;
+        background-color: $strip-black;
+        color: $font-color;
+        font-size: $font-size;
+        @media screen and (max-width: 400px) {
+            padding: 10px 20px;
+            font-size: 12px;
+        }
+    }
+    .paragraph {
+       text-align: center;
+       padding: 10px $padding-left;
+       font-style: italic;
+       font-size: $font-size;
+       @media screen and (max-width: 400px) {
+           padding: 10px 20px;
+           font-size: 12px;
+       }
+    }
+    .tabs-icon {
+        padding: 30px;
+        margin: 30px 55px;
+        @media screen and (max-width: 400px) {
+            margin: 0px;
+        }
+        div {
+            width: 200px;
+            height: 120px;
+            margin-left: 60px;
+            border: 2px solid $border-dark;
+            text-align: center;
+            @media screen and (max-width: 400px) {
+                width: 120px;
+                height: 80px;
+                margin: 0px 0px 15px 15px;
+            }
+            i {
+                color: $strip-black;
+                margin-top: 10px;
+                font-size: 60px;
+            }
+            p {
+                font-weight: bold;
+                margin-top: 10px;
+                @media screen and (max-width: 400px) {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
+.common-section {
+    padding: 10px;
+    color: $font-color;
+    background-color: $strip-black;
+    margin-top: 20px;
+    .text {
+        margin-left: $margin-left;
+    }
+}
+.paragraph-container {
+    background: $background;
+    font-style: italic;
+    padding: 15px;
+    .paragraph {
+        margin-left: $margin-left;
+    }
+}

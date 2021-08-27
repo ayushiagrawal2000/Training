@@ -1,0 +1,69 @@
+@import "_variables";
+.header {
+    height: 80px;
+    display: flex;
+    background: $background;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width:400px) {
+        display: block;
+        background: transparent;
+    }
+    .header-logo-container {
+        color: $strip-black;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        text-transform: uppercase;
+        @media screen and (max-width:400px) {
+            margin: 10px;
+        }
+        .header-logo {
+            font-size: 30px;
+            font-weight: bolder;
+            @media screen and (max-width:400px) {
+                font-size: 20px;
+            }
+        }
+        .header-logo-text {
+            font-size: 10px;
+            margin-left: 10px;
+            align-items: center;
+        }
+    }
+    .header-tabs {
+        margin-left:150px;
+        @media screen and (max-width: 400px) {
+            margin-left: 0;
+            background: $background;
+        }
+    }
+}
+.nav {
+    border: none ;
+    li {
+        @media screen and (max-width: 400px) {
+            height: 40px;
+        }
+        a {
+            top:20px;
+            color: $strip-black;
+            height: 58px;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            @media screen and (max-width: 400px) {
+                top: 0px;
+                height: 40px;
+                font-size: 5px;
+                width: 70px;
+            }
+        }
+    }  
+    .first a {
+        width: 164px;
+        @media screen and (max-width: 400px) {
+            width: 70px;
+        }
+    }
+}
