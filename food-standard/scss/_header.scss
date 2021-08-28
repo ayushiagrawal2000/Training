@@ -42,6 +42,10 @@
 }
 .nav {
     border: none ;
+    @media screen and (max-width: 400px) {
+        display: flex;
+        justify-content: space-between;
+    }
     li {
         @media screen and (max-width: 500px) {
             height: 40px;

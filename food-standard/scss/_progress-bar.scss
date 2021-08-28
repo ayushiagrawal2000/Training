@@ -1,23 +1,24 @@
 @import "_variables";
 .battery {
-    text-align: center;
-    position: relative;
-    margin-top: 5px;
-    @media screen and (max-width: 500px) {
-       bottom: 25px;
-    }
+   text-align: center;
+   position: relative;
+   margin-top: 5px;
+   @media screen and (max-width: 500px) {
+      bottom: 25px;
+      margin-top: 2px;
+   }
    .bar {
-    display: inline-block;
-    padding: 2px;
-    height: 15px;
-    background: $progress-default;
-    margin: 0;
-    @media screen and (max-width: 500px) {
-       padding: 0.5px;
-       height: 10px; 
-    }
-    }
+      display: inline-block;
+      padding: 2px;
+      height: 15px;
+      background: $progress-default;
+      margin: 0;
+      @media screen and (max-width: 500px) {
+      padding: 0.5px;
+      height: 10px; 
+   }
+   }
    .bar.active {
-    background: $progress-success;
-    }
+      background: $progress-success;
+   }
 }
