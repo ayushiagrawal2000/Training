@@ -4,12 +4,13 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var runSequence = require('run-sequence');
 var injectPartials = require('gulp-inject-partials');
+
 gulp.task('prepareHtml', function () {
   return gulp.src('./app/templates/*.html')
            .pipe(injectPartials({removeTags: true}))
            .pipe(gulp.dest('./app/output/'))
 });
-
+ 
 gulp.task('progressBar', function () {
     return gulp.src('./app/templates/partials/_header.html')
             .pipe(injectPartials())

@@ -37,7 +37,7 @@
 
 .nav {
   border: none; }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 500px) {
     .nav {
       display: flex;
       justify-content: space-between; } }
@@ -78,7 +78,7 @@
     margin: 0; }
     @media screen and (max-width: 500px) {
       .battery .bar {
-        padding: 0.5px;
+        padding: 1px;
         height: 10px; } }
   .battery .bar.active {
     background: #63BF87; }
@@ -109,8 +109,64 @@
         margin-top: 5px;
         font-size: 10px; } }
 
-.first-section {
-  border: 2px solid #EDEDED; }
+.chart-section-container {
+  border: 2px solid white;
+  margin: 20px 100px; }
+  @media screen and (max-width: 500px) {
+    .chart-section-container {
+      margin: 20px 40px; } }
+  .chart-section-container .row {
+    margin: 0;
+    display: flex; }
+    @media screen and (max-width: 500px) {
+      .chart-section-container .row {
+        display: block; } }
+    .chart-section-container .row .chart-title {
+      border: 5px solid #EDEDED;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px; }
+    .chart-section-container .row .blocks-section {
+      border: 5px solid #EDEDED;
+      margin: 2px;
+      text-align: center; }
+      .chart-section-container .row .blocks-section .heading {
+        margin-top: 5px; }
+      .chart-section-container .row .blocks-section .charts-container {
+        padding: 20px 0px; }
+        .chart-section-container .row .blocks-section .charts-container .row {
+          margin: 0;
+          text-align: center;
+          display: flex;
+          justify-content: space-between; }
+          @media screen and (max-width: 500px) {
+            .chart-section-container .row .blocks-section .charts-container .row {
+              display: block; } }
+          .chart-section-container .row .blocks-section .charts-container .row .charts {
+            height: 60px;
+            border-radius: 50%;
+            border: 5px solid green; }
+            @media screen and (max-width: 500px) {
+              .chart-section-container .row .blocks-section .charts-container .row .charts {
+                display: inline-block;
+                float: none;
+                margin: 5px; } }
+
+.common-section {
+  color: white;
+  background-color: black; }
+  .common-section .text {
+    margin-left: 85px;
+    padding: 10px; }
+
+.paragraph-container {
+  background: #EDEDED;
+  font-style: italic;
+  padding: 15px 85px; }
 
 .dream-container .main-title {
   padding: 10px 100px;
@@ -140,7 +196,8 @@
   margin-bottom: 40px;
   display: flex;
   padding: 0px 130px;
-  justify-content: space-between; }
+  justify-content: space-between;
+  text-align: center; }
   @media screen and (max-width: 500px) {
     .dream-container .tabs-icon {
       margin: 25px;
@@ -155,6 +212,8 @@
       .dream-container .tabs-icon div {
         width: 140px;
         height: 140px;
+        display: inline-block;
+        float: none;
         margin: 0px 0px 10px 10px; } }
     .dream-container .tabs-icon div i {
       color: black;
@@ -165,23 +224,7 @@
           margin-top: 25px;
           font-size: 50px; } }
     .dream-container .tabs-icon div p {
-      font-weight: bold;
-      margin-top: 10px; }
+      font-weight: bold; }
       @media screen and (max-width: 500px) {
         .dream-container .tabs-icon div p {
           font-size: 8px; } }
-
-.common-section {
-  padding: 10px;
-  color: white;
-  background-color: black;
-  margin-top: 20px; }
-  .common-section .text {
-    margin-left: 40px; }
-
-.paragraph-container {
-  background: #EDEDED;
-  font-style: italic;
-  padding: 15px; }
-  .paragraph-container .paragraph {
-    margin-left: 40px; }

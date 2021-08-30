@@ -1,0 +1,13 @@
+.common-section {
+    color: $font-color;
+    background-color: $strip-black;
+    .text {
+        margin-left: 85px;
+        padding: 10px;
+    }
+}
+.paragraph-container {
+    background: $background;
+    font-style: italic;
+    padding: 15px 85px;
+}

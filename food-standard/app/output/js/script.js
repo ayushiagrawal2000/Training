@@ -11,3 +11,14 @@ function battery(charge) {
     });
 }
 battery(67.15); // (67%) Any number 100 or lower will work, Including decimals.
+
+//hover effect
+$(".chart-title").hover(function(){
+    console.log("inside in function");
+    $(".chart-section-container").css("border", "2px solid black");
+    $(this).text("description");
+    $(this).css({"background":"#EDEDED", "color":"black"});
+},function(){
+    console.log("inside out function");
+    $(".chart-section-container").css("border", "2px solid white");
+});

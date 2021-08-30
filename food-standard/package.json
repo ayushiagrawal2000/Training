@@ -22,6 +22,7 @@
     "yargs": "^3.32.0"
   },
   "devDependencies": {
+    "gulp-image": "^6.2.1",
     "gulp-install": "^1.1.0"
   }
 }

@@ -2,6 +2,7 @@
 @import "_progress-bar";
 @import "_repeated-section";
 @import "_chart-section";
+@import "_common";
 @import "_variables";
 .dream-container {
     .main-title {
@@ -33,6 +34,7 @@
         display: flex;
         padding: 0px 130px;
         justify-content: space-between;
+        text-align: center;
         @media screen and (max-width: 500px) {
             margin: 25px;
             display: block;
@@ -46,6 +48,8 @@
             @media screen and (max-width: 500px) {
                 width: 140px;
                 height: 140px;
+                display: inline-block;
+                float: none;
                 margin: 0px 0px 10px 10px;
             }
             i {
@@ -59,28 +63,10 @@
             }
             p {
                 font-weight: bold;
-                margin-top: 10px;
                 @media screen and (max-width: 500px) {
                     font-size: 8px;
                 }
             }
         }
-    }
-}
-.common-section {
-    padding: 10px;
-    color: $font-color;
-    background-color: $strip-black;
-    margin-top: 20px;
-    .text {
-        margin-left: $margin-left;
-    }
-}
-.paragraph-container {
-    background: $background;
-    font-style: italic;
-    padding: 15px;
-    .paragraph {
-        margin-left: $margin-left;
     }
 }
