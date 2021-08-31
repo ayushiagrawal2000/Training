@@ -12,23 +12,20 @@
         @media screen and (max-width: 500px) {
             display: block;
         }
-        .chart-title {
-            border: 5px solid $border-dark;
-            background-color: $strip-black;
+        .blocks-section1 {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: $font-color;
-            padding: 20px;
+            border: 5px solid $border-dark;
+            margin: 2px 0px 2px 2px;
         }
-        .blocks-section {
+        .blocks-section2 {
             border: 5px solid $border-dark;
             margin: 2px;
             text-align: center;
-            .heading {
-                margin-top: 5px;
-            }
+            position: relative;
+            padding: 0;
             .charts-container {
                 padding: 20px 0px;
                 .row {
@@ -39,18 +36,25 @@
                     @media screen and (max-width: 500px) {
                         display: block;
                     }
-                    .charts {
-                        height: 60px;
-                        border-radius: 50%;
-                        border: 5px solid green;
-                        @media screen and (max-width: 500px) {
-                            display: inline-block;
-                            float: none;
-                            margin: 5px;
-                        }
-                    }
                 }         
+            }
+            i {
+                float: right;
+                margin: 5px;
             }
         }
     }
+}
+.chart-title {
+    border: 5px solid $border-dark;
+    background-color: $strip-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $font-color;
+    padding: 20px;
+}
+.heading {
+    margin-top: 5px;
 }

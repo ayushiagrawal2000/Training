@@ -1,8 +1,47 @@
-// @import "_variables";
-// .chart-section-container:hover {
-//     border: 2px solid black;
-//     .chart-title:hover {
-//         background-color: $background;
-//         color: black;
-//     }
-// }
+.charts {
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid green;
+    @media screen and (max-width: 500px) {
+        display: inline-block;
+        float: none;
+        margin: 5px;
+    }
+}
+.details-container {
+    display: none;
+}
+.show-details-on-hover {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
+    div {
+        margin: 10px 0px;
+        @media screen and (max-width: 500px) {
+            margin: 0px;
+        }
+    }
+    .hidden-content {
+        display: none;
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+    }
+    .title {
+        font-weight: bold;
+        font-size: 10px;
+    }
+    .description {
+        font-size: 10px;
+        @media screen and (max-widht: 500px) {
+            font-size: 5px;
+            margin: 5px 0px 10px;
+        }
+    }
+}    
+.description-on-hover {
+    font-size: 10px;
+}

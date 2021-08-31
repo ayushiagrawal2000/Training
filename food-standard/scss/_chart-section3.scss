@@ -1,0 +1,56 @@
+.suppliers {
+    border: 2px solid white;
+    margin: 20px 100px;
+    @media screen and (max-width: 500px) {
+        margin: 20px 40px;
+    }
+    .row {
+        margin: 0;
+        display: flex;
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+        .wrapper {
+            padding: 0;
+        }
+        .purchasing-data {
+            border: 5px solid $border-dark;
+            text-align: center;
+            margin-left: 2px;
+            .purchasing-charts-container {
+                display: flex;
+                justify-content: space-around;
+                margin: 20px;
+            }
+            .charts {
+            width: 60px;
+            }
+        }
+        .amount-section {
+            border: 5px solid $border-dark;
+            margin-left: 2px;
+            text-align: center;
+            .amount {
+                margin-top: 30px;
+                font-size: 25px;
+                .amount-value:hover {
+                    color: black;
+                }
+            }
+            .red {
+                color: $progress-default;
+            }
+            .green {
+                color: $progress-success;
+            }
+        }
+        .report-button {
+            border: 5px solid $border-dark;
+            background-color: #1F78B4;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            margin-left: 2px;
+        }
+    }
+}
