@@ -24,6 +24,7 @@
                 margin: 20px;
                 @media screen and (max-width: 500px) {
                     display: block;
+                    height: 180px;
                 }
             }
             .charts {
@@ -38,6 +39,9 @@
             .amount {
                 margin-top: 30px;
                 font-size: 25px;
+                @media screen and (max-width: 500px) {
+                    height: 100px;
+                }
                 p {
                     padding: 0;
                 }

@@ -17,6 +17,10 @@
         padding: 15px;
         margin-left: 2px;
         position: relative;
+        height: 270px;
+        @media screen and (max-width: 500px) {
+            height: 170px;
+        }
         .charts {
            margin: 10px;
            display: inline-block;
