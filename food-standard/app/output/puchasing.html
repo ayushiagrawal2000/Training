@@ -25,10 +25,10 @@
             <div class="header-logo-text2">02/26/2021 - 03/25/2021</div>
         </div>    
     </div>
-    <div class="header-tabs">
-        <ul class="nav nav-tabs">
+    <div class="header-tabs affectedDiv">
+        <ul class="nav nav-tabs" id="myTab">
             <li class="active first"><a data-toggle="tab" href="#home">THE DREAMS & FOOD STANDARDS</a></li>
-            <li><a data-toggle="tab" href="../../output/puchasing.html">PURCHASING</a>
+            <li><a data-toggle="tab" data-target="puchasing.html">PURCHASING</a>
                 <div class='battery'>
                     <div class='bar' data-power='10'></div>
                     <div class='bar' data-power='20'></div>
@@ -101,7 +101,10 @@
 
 <div class="chart-section-container">
     <div class="row">
-        <div class="chart-title cor col-lg-2">ADHERENCE TO COR STANDARDS</div>
+        <div class="chart-title cor col-lg-2">
+            <p>ADHERENCE TO COR STANDARDS</p> 
+            <div><i class="fas fa-info-circle info-icon cor-icon"></i></div>
+        </div>
         <div class="blocks-section1 col-lg-2">
             <div class="charts col-lg-6 col-xs-4"></div>
         </div>
@@ -118,6 +121,7 @@
                     <div class="charts col-lg-1 col-xs-4"></div>
                 </div>
             </div>
+            <div><i class="fas fa-info-circle info-icon details-icon"></i></div>
         </div>
     </div>
 </div>
@@ -125,14 +129,23 @@
 
 <div class="purchases-container">
     <div class="row">
-        <div class="chart-title purchase col-lg-2">20% OF PURCHASES FARM TO FORK</div>
+        <div class="chart-title purchase col-lg-2">
+           <p>20% OF PURCHASES FARM TO FORK</p>
+            <div><i class="fas fa-info-circle info-icon purchase-title-info"></i></div>
+        </div>
         <div class="purchase-chart col-lg-2">
             <div class="heading">heading is here</div>
-            <div class="chart-description heading">description</div>
-            <div class="charts-wrapper"><div class="charts"></div>
-            <div class="title">Title</div>
-            <div class="charts"></div>
-            <div class="title">Title</div></div>
+            <div class="charts-wrapper">
+                <div class="chart-container">
+                    <div class="charts"></div>
+                    <div class="title">Title</div>
+                </div>
+                <div class="chart-container">
+                    <div class="charts"></div>
+                    <div class="title">Title</div>
+                </div>
+            </div>
+            <div><i class="fas fa-info-circle info-icon purchase-chart-info"></i></div>
         </div>
         <div class="purchase-graph-container col-lg-8">
             <div class="heading">something is gonna be here</div>
@@ -143,33 +156,39 @@
 
 <div class="suppliers">
     <div class="row">
-        <div class="chart-title supplier col-lg-2">PREFERRED PRODUCTS AND SUPPLIERS</div>
+        <div class="chart-title supplier col-lg-2">
+           <p>PREFERRED PRODUCTS AND SUPPLIERS</p> 
+            <div><i class="fas fa-info-circle info-icon supplier-title-info"></i></div>
+        </div>
         <div class="col-lg-10 wrapper">
             <div class="row">
                 <div class="amount-section col-lg-3">
                     <div class="heading">Title</div>
                     <div class="amount red"><p class="amount-value1">$180.00</p></div>
+                    <div><i class="fas fa-info-circle info-icon amount-section1-info"></i></div>
                 </div>
                 <div class="amount-section col-lg-3">
                     <div class="heading">Title</div>
                     <div class="amount green"><p class="amount-value2">$180.00</p></div>
+                    <div><i class="fas fa-info-circle info-icon amount-section2-info"></i></div>
                 </div>
                 <div class="purchasing-data col-lg-6">
                     <div class="heading">something is gonna be here</div>
-                    <div class="purchasing-charts-container">
-                        <div class="data-container">
+                    <div class="purchasing-charts-container row">
+                        <div class="data-container col-xs-12">
                             <div class="charts"></div>
                             <div class="about">total</div>
                         </div>
-                        <div class="data-container">
+                        <div class="data-container col-xs-6">
                             <div class="charts"></div>
                             <div class="about">total</div>
                         </div>
-                        <div class="data-container">
+                        <div class="data-container col-xs-6">
                             <div class="charts"></div>
                             <div class="about">total</div>
                         </div>
                     </div>
+                    <div><i class="fas fa-info-circle info-icon purchasing-chart-info"></i></div>
                 </div>
                 <div class="report-button col-lg-3">
                     <div class="heading">DOWNLOAD FLAVOR FIRST REPORT</div>

@@ -17,10 +17,14 @@
             border: 5px solid $border-dark;
             text-align: center;
             margin-left: 2px;
+            position: relative;
             .purchasing-charts-container {
                 display: flex;
                 justify-content: space-around;
                 margin: 20px;
+                @media screen and (max-width: 500px) {
+                    display: block;
+                }
             }
             .charts {
             width: 60px;
@@ -30,11 +34,12 @@
             border: 5px solid $border-dark;
             margin-left: 2px;
             text-align: center;
+            position: relative;
             .amount {
                 margin-top: 30px;
                 font-size: 25px;
-                .amount-value:hover {
-                    color: black;
+                p {
+                    padding: 0;
                 }
             }
             .red {

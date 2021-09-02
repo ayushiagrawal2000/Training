@@ -16,6 +16,7 @@
         text-align: center;
         padding: 15px;
         margin-left: 2px;
+        position: relative;
         .charts {
            margin: 10px;
            display: inline-block;
@@ -27,8 +28,17 @@
         border: 5px solid $border-dark;
         margin-left: 2px;
         text-align: center;
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
     }
 }
 .chart-description {
     visibility: hidden;
+ }
+ .charts-wrapper {
+    @media screen and (max-width: 500px) {
+        display: flex;
+        justify-content: center;
+    }
  }

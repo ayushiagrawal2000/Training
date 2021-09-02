@@ -27,9 +27,8 @@
             position: relative;
             padding: 0;
             .charts-container {
-                padding: 20px 0px;
-                .row {
-                    margin: 0;
+               .row {
+                    margin: 10px;
                     text-align: center;
                     display: flex;
                     justify-content: space-between;
@@ -54,7 +53,19 @@
     text-align: center;
     color: $font-color;
     padding: 20px;
+    position: relative;
 }
 .heading {
     margin-top: 5px;
+}
+.info-icon {
+    color: gray;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    display: none;
+    @media screen and(max-width: 500px) {
+        display: block;
+    }
 }
