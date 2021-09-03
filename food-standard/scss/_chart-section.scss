@@ -1,8 +1,9 @@
 @import "_variables";
 @import "_hover";
 .chart-section-container {
-    border: 2px solid white;
+    border: 3px solid white;
     margin: 20px 100px;
+    padding: 2px;
     @media screen and (max-width: 500px) {
         margin: 20px 40px;
     }
@@ -18,12 +19,12 @@
             align-items: center;
             text-align: center;
             border: 5px solid $border-dark;
-            margin: 2px 0px 2px 2px;
+            margin-left: 2px;
             height: 140px;
         }
         .blocks-section2 {
             border: 5px solid $border-dark;
-            margin: 2px;
+            margin-left: 2px;
             text-align: center;
             position: relative;
             padding: 0;
@@ -47,7 +48,6 @@
     }
 }
 .chart-title {
-    border: 5px solid $border-dark;
     background-color: $strip-black;
     display: flex;
     justify-content: center;

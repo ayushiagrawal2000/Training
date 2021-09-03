@@ -156,8 +156,9 @@
   font-size: 10px; }
 
 .chart-section-container {
-  border: 2px solid white;
-  margin: 20px 100px; }
+  border: 3px solid white;
+  margin: 20px 100px;
+  padding: 2px; }
   @media screen and (max-width: 500px) {
     .chart-section-container {
       margin: 20px 40px; } }
@@ -173,11 +174,11 @@
       align-items: center;
       text-align: center;
       border: 5px solid #EDEDED;
-      margin: 2px 0px 2px 2px;
+      margin-left: 2px;
       height: 140px; }
     .chart-section-container .row .blocks-section2 {
       border: 5px solid #EDEDED;
-      margin: 2px;
+      margin-left: 2px;
       text-align: center;
       position: relative;
       padding: 0; }
@@ -195,7 +196,6 @@
         margin: 5px; }
 
 .chart-title {
-  border: 5px solid #EDEDED;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -223,8 +223,9 @@
       display: block; } }
 
 .purchases-container {
-  border: 2px solid white;
-  margin: 20px 100px; }
+  border: 3px solid white;
+  margin: 20px 100px;
+  padding: 2px; }
   @media screen and (max-width: 500px) {
     .purchases-container {
       margin: 20px 40px; } }
@@ -266,8 +267,9 @@
     justify-content: center; } }
 
 .suppliers {
-  border: 2px solid white;
-  margin: 20px 100px; }
+  border: 3px solid white;
+  margin: 20px 100px;
+  padding: 2px; }
   @media screen and (max-width: 500px) {
     .suppliers {
       margin: 20px 40px; } }
