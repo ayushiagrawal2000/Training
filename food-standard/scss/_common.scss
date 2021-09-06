@@ -1,0 +1,19 @@
+.common-section {
+    color: $font-color;
+    background-color: $strip-black;
+    .text {
+        margin-left: 85px;
+        padding: 10px;
+        @media screen and (max-width: 500px) {
+            margin-left: 40px;
+        }
+    }
+}
+.paragraph-container {
+    background: $background;
+    font-style: italic;
+    padding: 15px 85px;
+    @media screen and (max-width: 500px) {
+        padding: 15px 40px;
+    }
+}

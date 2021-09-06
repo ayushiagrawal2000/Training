@@ -1,0 +1,73 @@
+@import "_variables";
+.header {
+    height: 100px;
+    display: flex;
+    background: $background;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width:500px) {
+        display: block;
+        height: 78px;
+        background: transparent;
+    }
+    .header-logo-container {
+        color: $strip-black;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        text-transform: uppercase;
+        @media screen and (max-width:500px) {
+            margin: 10px;
+        }
+        .header-logo {
+            font-size: 25px;
+            font-weight: bolder;
+            @media screen and (max-width:500px) {
+                font-size: 20px;
+            }
+        }
+        .header-logo-text {
+            font-size: 10px;
+            margin-left: 10px;
+            align-items: center;
+        }
+    }
+    .header-tabs {
+        margin: 0px 40px;
+        @media screen and (max-width: 500px) {
+            margin: 0;
+            background: $background;
+        }
+    }
+}
+.nav {
+    border: none ;
+    @media screen and (max-width: 500px) {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        @media screen and (max-width: 500px) {
+            height: 40px;
+        }
+        a {
+            top:30px;
+            color: $strip-black;
+            height: 58px;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            @media screen and (max-width: 500px) {
+                top: 0px;
+                height: 40px;
+                font-size: 5px;
+            }
+        }
+    }  
+    .first a {
+        width: 164px;
+        @media screen and (max-width: 500px) {
+            width: 70px;
+        }
+    }
+}

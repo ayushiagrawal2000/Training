@@ -1,0 +1,28 @@
+{
+  "name": "Sms",
+  "version": "1.0.0",
+  "description": "Use as SMS features in bidgely",
+  "main": "app/monthlySummary.html",
+  "scripts": {
+    "start": "http-server -c-1 ./app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-inject": "^5.0.5",
+    "gulp-inject-partials": "^1.0.5",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.2.1",
+    "run-sequence": "^1.2.2",
+    "yargs": "^3.32.0"
+  },
+  "devDependencies": {
+    "gulp-image": "^6.2.1",
+    "gulp-install": "^1.1.0"
+  }
+}
