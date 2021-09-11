@@ -1,0 +1,24 @@
+.first-tile {
+  background-color: black;
+  color: white;
+  width: 224px;
+  height: 200px;
+  font-size: 25px;
+  letter-spacing: 0.23px;
+  text-transform: uppercase;
+  padding: 35px 35px;
+  margin-right: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .first-tile {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.23px;
+    text-transform: uppercase;
+    padding: 16px 10px;
+  }
+}

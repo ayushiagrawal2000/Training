@@ -1,0 +1,61 @@
+.percent-tile {
+  width: 300px;
+  height: 200px;
+  border-top: 5px solid #ededed;
+  border-right: 5px solid #ededed;
+  border-bottom: 5px solid #ededed;
+
+
+  .percent-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    line-height: 18pt;
+    margin: 5px 15px;
+  }
+  .percent-body {
+    position: relative;
+    display: flex;
+    width: 100%;
+    font-size: 48px;
+    line-height: 39pt;
+    height: 136px;
+    flex-flow: column nowrap;
+    letter-spacing: 0;
+    color: #63BF87;
+    text-transform: uppercase;
+    margin-top: 5px;
+
+    .percent-stat {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 31pt;
+      margin-top: 15px;
+      border-top: 2px dashed #ededed;
+      color: black
+    }
+    .percent-foot {
+      @extend .percent-stat;
+      border-top: 0;
+      font-size: 13px;
+      margin-bottom: 30px;
+      margin-top: -5px;
+      font-weight: 600;
+      line-height: 13pt;
+    }
+  }
+  #overlay-percent {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 130px;
+    background-color: white;
+    z-index: 2;
+    font-size: 15px;
+    justify-content: center;
+    flex-flow: column nowrap;
+    color: black;
+  }
+}

@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 20px;
+    .prior {
+        margin-top: 20px;
+        display: flex;
+        justify-content: start;
+        flex-flow: row wrap;
+        width: auto;
+        border: 5px solid rgba(0,0,0,0.0);
+    }
+}
+// this is not working right now
+.prior:nth-child(2) {
+    border-left: 5px solid #ededed;
+}
+//
+.sepration {
+    margin: 20px auto ;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    
+        .container {
+            display: flex;
+            flex-flow: column wrap;
+            justify-self: center;
+            align-content: center;
+            .prior {
+                margin-top: 15px;
+                display: flex;
+                justify-content: center;
+                flex-flow: column wrap;
+                width: auto;
+            }
+        }
+    }
+  }

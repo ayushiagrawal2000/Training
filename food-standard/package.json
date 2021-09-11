@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-inject": "^5.0.5",
     "gulp-inject-partials": "^1.0.5",
@@ -22,7 +21,7 @@
     "yargs": "^3.32.0"
   },
   "devDependencies": {
-    "gulp-image": "^6.2.1",
+    "gulp": "^3.9.1",
     "gulp-install": "^1.1.0"
   }
 }
