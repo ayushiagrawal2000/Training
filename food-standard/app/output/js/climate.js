@@ -7,10 +7,12 @@ function Climate() {
     const first = document.getElementsByClassName("first-tile");
     for(let i = 0; i < first.length; i++) {
       first[i].addEventListener("mouseover", (e) => {
-        e.target.parentElement.style.border = "5px solid black";
+        e.target.parentElement.style.border = "3px solid black";
+        e.target.firstElementChild.style.display = "flex";
       })
       first[i].addEventListener("mouseout", (e) => {
-        e.target.parentElement.style.border = "5px solid rgba(0,0,0,0.0)";
+        e.target.parentElement.style.border = "3px solid rgba(0,0,0,0.0)";
+        e.target.firstElementChild.style.display = "none";
       })
     }
   }

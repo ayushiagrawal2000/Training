@@ -4,8 +4,6 @@
   border-top: 5px solid #ededed;
   border-right: 5px solid #ededed;
   border-bottom: 5px solid #ededed;
-
-
   .percent-title {
     font-size: 17px;
     font-weight: 600;
@@ -26,7 +24,6 @@
     color: #63BF87;
     text-transform: uppercase;
     margin-top: 5px;
-
     .percent-stat {
       width: 100%;
       font-size: 24px;
@@ -57,5 +54,16 @@
     justify-content: center;
     flex-flow: column nowrap;
     color: black;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .percent-tile {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 0;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed;
   }
 }

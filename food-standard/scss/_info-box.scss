@@ -5,7 +5,6 @@
   border-top: 5px solid #ededed;
   border-right: 5px solid #ededed;
   border-bottom: 5px solid #ededed;
-
   .info-title {
     font-size: 17px;
     font-weight: 600;
@@ -13,7 +12,6 @@
     text-transform: uppercase;
     line-height: 18pt;
     margin: 5px 15px;
-
   }
   .info-body {
     position: relative;
@@ -49,5 +47,16 @@
       justify-content: center;
       flex-flow: column nowrap;
     }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .info-tile {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 0;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed;
   }
 }
