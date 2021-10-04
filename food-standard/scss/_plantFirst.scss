@@ -1,0 +1,76 @@
+.plant-first-tile {
+  background-color: black;
+  color: white;
+  width: 221.5px;
+  height: 197.5px;
+  border: 5px solid black;
+  font-size: 25px;
+  letter-spacing: 0.23px;
+  text-transform: uppercase;
+  padding: 33px 35px;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.23px;
+    text-transform: uppercase;
+    padding: 16px 10px;
+    border: 5px solid black;
+  }
+  .plant-description-1 {
+    position: absolute;
+    margin: 0;
+    top: -7px;
+    left: -6.5px;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 107%;
+    height: 107%;
+    padding: 33px 27px;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    background-color: $background;
+    @media only screen and (max-width: 600px) {
+      top: -6px;
+      left: -8px;
+      width: 305px;
+      height: 113%;
+      padding: 33px 27px;
+    }
+  }
+}
+
+// .plant-description-1 {
+
+// }
+// }
+
+// @media only screen and (max-width: 600px) {
+//   .plant-first-tile {
+//       background-color: black;
+//       position: relative;
+//       color: white;
+//       width: 97%;
+//       margin: 3px;
+//       height: 97px;
+//       text-align: center;
+//       font-size: 25px;
+//       letter-spacing: 0.23px;
+//       text-transform: uppercase;
+//       padding: 16px 10px;
+//   }
+
+//   .plant-description-1 {
+//       top: -6px;
+//       left: -10px;
+//       width: 106%;
+//       height: 117%;
+//       padding: 33px 27px;
+//   }
+// }

@@ -11,6 +11,15 @@
 @import "_info-multi";
 @import "_climate";
 @import "_first-tile";
+@import "_pichart.scss";
+@import "_plant.scss";
+@import "_plantFirst.scss";
+@import "_barFirst.scss";
+@import "_barGraph.scss";
+@import "fonts.scss";
+@import "_wellness.scss";
+@import "_wellnessStat.scss";
+@import "_wellnessBarTile1.scss";
 .dream-container {
     .main-title {
         padding: 10px $padding-left;

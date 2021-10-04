@@ -1,0 +1,50 @@
+.tile-A {
+  border-top: 3px solid rgba(0, 0, 0, 0);
+  border-right: 3px solid rgba(0, 0, 0, 0);
+  padding-top: 3px;
+  height: 510px;
+  @media screen and (max-width: 500px) {
+    position: relative;
+  }
+}
+.tile-A11 {
+  margin: -5px -15px;
+  padding: 3px 3px;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.tile-A12 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  padding: 0px 3px 0px 32px;
+  padding-bottom: 3px;
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    top: 502px;
+    padding: 6px;
+    width: 312px;
+  }
+}
+.tile-A21 {
+  height: 298px;
+  padding-top: 5px;
+  border-right: 3px solid rgba(0, 0, 0, 0);
+  border-top: 3px solid rgba(0, 0, 0, 0);
+  margin-top: 4px;
+  @media screen and (max-width: 500px) {
+    position: absolute;
+    top: 1024px;
+  }
+}
+
+.barContainer {
+  padding: 5px;
+  height: 382px;
+  width: 100%;
+  @media screen and (max-width: 500px) {
+    position: relative;
+    top: 1061px;
+    left: -2px;
+    width: 319px;
+    height: 621px;
+  }
+}

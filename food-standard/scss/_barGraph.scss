@@ -1,0 +1,28 @@
+.bar-tile {
+  position: relative;
+  width: 920px;
+  height: 364px;
+  border: 5px solid #ededed;
+  display: inline-block;
+  .bar-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    line-height: 18pt;
+    margin: 12px 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .bar-tile {
+    position: relative;
+    display: block;
+    width: 305px;
+    height: 498px;
+    border: 0;
+    margin-top: -9px;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed;
+  }
+}

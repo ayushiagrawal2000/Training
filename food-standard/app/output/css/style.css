@@ -1,7 +1,3 @@
-@font-face {
-  font-family: agenda-ultra-condensed;
-  src: url(../app/output/fonts/ufonts.com_agenda-boldultracondensed.ttf); }
-
 .header {
   font-family: agenda-ultra-condensed;
   font-style: normal;
@@ -118,10 +114,6 @@
       .nav .first a {
         width: 70px; } }
 
-@font-face {
-  font-family: agenda-ultra-condensed;
-  src: url(../app/output/fonts/ufonts.com_agenda-boldultracondensed.ttf); }
-
 .battery {
   text-align: center;
   position: relative;
@@ -142,10 +134,6 @@
         height: 10px; } }
   .battery .bar.active {
     background: #63BF87; }
-
-@font-face {
-  font-family: agenda-ultra-condensed;
-  src: url(../app/output/fonts/ufonts.com_agenda-boldultracondensed.ttf); }
 
 .section-container {
   padding: 20px 100px 0px;
@@ -172,10 +160,6 @@
         margin-left: 0px;
         margin-top: 5px;
         font-size: 10px; } }
-
-@font-face {
-  font-family: agenda-ultra-condensed;
-  src: url(../app/output/fonts/ufonts.com_agenda-boldultracondensed.ttf); }
 
 .charts {
   height: 60px;
@@ -409,11 +393,8 @@
     .paragraph-container {
       padding: 15px 40px; } }
 
-@font-face {
-  font-family: agenda-ultra-condensed;
-  src: url(../app/output/fonts/ufonts.com_agenda-boldultracondensed.ttf); }
-
 .info-tile {
+  padding: 0;
   position: relative;
   width: 300px;
   height: 200px;
@@ -421,22 +402,25 @@
   border-right: 5px solid #ededed;
   border-bottom: 5px solid #ededed; }
   .info-tile .info-title {
+    font-family: Agenda Bd;
+    font-style: normal;
     font-size: 17px;
     font-weight: 600;
     line-height: 18pt;
     text-transform: uppercase;
-    line-height: 18pt;
+    letter-spacing: 0;
     margin: 5px 15px; }
   .info-tile .info-body {
     position: relative;
     display: flex;
-    align-content: center;
+    justify-content: end;
+    font-family: Agenda Reg;
+    font-style: normal;
+    font-weight: 600;
     font-size: 48px;
-    margin-top: 19px;
-    line-height: 68pt;
-    height: 147px;
+    height: 143px;
     width: auto;
-    color: #E35E56;
+    color: #e35e56;
     flex-flow: column wrap;
     line-height: 68pt;
     text-transform: uppercase;
@@ -445,20 +429,27 @@
       color: black;
       font-size: 13px;
       margin-bottom: 30px;
-      margin-top: -10px;
+      margin-top: -15px;
+      font-family: Agenda Bd;
+      font-style: normal;
       font-weight: 600;
-      line-height: 13pt; }
-    .info-tile .info-body #overlay-body {
-      position: absolute;
-      display: none;
-      width: 100%;
-      height: 130px;
-      background-color: white;
-      color: black;
-      z-index: 2;
-      font-size: 15px;
-      justify-content: center;
-      flex-flow: column nowrap; }
+      line-height: 13pt;
+      text-transform: uppercase;
+      letter-spacing: 0; }
+  .info-tile .overlay-body {
+    position: absolute;
+    top: 25px;
+    left: 6px;
+    font-family: Agenda It;
+    display: none;
+    width: 98%;
+    height: 156px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    font-size: 15px;
+    justify-content: center;
+    flex-flow: column nowrap; }
 
 @media only screen and (max-width: 600px) {
   .info-tile {
@@ -471,56 +462,69 @@
     border-bottom: 5px solid #ededed; } }
 
 .percent-tile {
+  padding: 0;
   width: 300px;
   height: 200px;
   border-top: 5px solid #ededed;
   border-right: 5px solid #ededed;
   border-bottom: 5px solid #ededed; }
   .percent-tile .percent-title {
+    font-family: Agenda Bd;
+    font-style: normal;
     font-size: 17px;
     font-weight: 600;
     line-height: 18pt;
     text-transform: uppercase;
-    line-height: 18pt;
+    letter-spacing: 0;
     margin: 5px 15px; }
   .percent-tile .percent-body {
     position: relative;
     display: flex;
+    top: 10px;
     width: 100%;
     font-size: 48px;
     line-height: 39pt;
-    height: 136px;
+    height: 120px;
     flex-flow: column nowrap;
     letter-spacing: 0;
-    color: #63BF87;
+    color: #63bf87;
     text-transform: uppercase;
     margin-top: 5px; }
-    .percent-tile .percent-body .percent-stat, .percent-tile .percent-body .percent-foot {
+    .percent-tile .percent-body .percent-stat, .percent-tile .percent-body .percent-foot, .percent-tile .percent-body .wellness-tile .wellness-body .wellness-foot, .wellness-tile .wellness-body .percent-tile .percent-body .wellness-foot {
       width: 100%;
       font-size: 24px;
       font-weight: 600;
       line-height: 31pt;
-      margin-top: 15px;
+      padding-top: 7px;
+      margin: 20px 0px 5px 0px;
       border-top: 2px dashed #ededed;
-      color: black; }
+      color: black;
+      font-family: Agenda Bd;
+      font-style: normal;
+      line-height: 13pt;
+      text-transform: uppercase;
+      letter-spacing: 0; }
     .percent-tile .percent-body .percent-foot {
       border-top: 0;
       font-size: 13px;
-      margin-bottom: 30px;
-      margin-top: -5px;
+      margin-top: -10px;
       font-weight: 600;
       line-height: 13pt; }
-  .percent-tile #overlay-percent {
+  .percent-tile .overlay-percent {
     position: absolute;
+    top: 50px;
+    left: 6px;
+    font-family: Agenda It;
     display: none;
-    width: 100%;
-    height: 130px;
+    width: 98%;
+    height: 136px;
     background-color: white;
+    color: black;
     z-index: 2;
     font-size: 15px;
     justify-content: center;
     flex-flow: column nowrap;
-    color: black; }
+    padding-bottom: 25px; }
 
 @media only screen and (max-width: 600px) {
   .percent-tile {
@@ -533,6 +537,7 @@
     border-bottom: 5px solid #ededed; } }
 
 .multi-tile {
+  padding: 0;
   position: relative;
   box-sizing: border-box;
   width: 300px;
@@ -541,12 +546,18 @@
   border-right: 5px solid #ededed;
   border-bottom: 5px solid #ededed; }
   .multi-tile .multi-title {
+    font-family: Agenda Bd;
+    font-style: normal;
     font-size: 17px;
     font-weight: 600;
     line-height: 18pt;
     text-transform: uppercase;
-    line-height: 18pt;
+    letter-spacing: 0;
     margin: 5px 15px; }
+  .multi-tile .bg-green {
+    background-color: #63bf87;
+    color: #ffffff;
+    border: 0; }
   .multi-tile .multi-body {
     position: relative;
     display: flex;
@@ -570,22 +581,20 @@
       margin: 5px 5px;
       flex-flow: column wrap;
       justify-content: center; }
-    .multi-tile .multi-body .bg-green {
-      background-color: #63bf87;
-      color: #ffffff;
-      border: 0; }
-    .multi-tile .multi-body #overlay-multi {
-      position: absolute;
-      display: none;
-      width: 100%;
-      height: 100%;
-      padding-top: 24px;
-      background-color: white;
-      z-index: 2;
-      font-size: 15px;
-      justify-content: center;
-      flex-flow: column nowrap;
-      color: black; }
+  .multi-tile .overlay-multi {
+    position: absolute;
+    top: 25px;
+    left: 6px;
+    font-family: Agenda It;
+    display: none;
+    width: 98%;
+    height: 156px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    font-size: 15px;
+    justify-content: center;
+    flex-flow: column nowrap; }
 
 @media only screen and (max-width: 600px) {
   .multi-tile {
@@ -598,14 +607,16 @@
     border-bottom: 5px solid #ededed; } }
 
 .contain {
-  margin: 20px 93px 0px 93px; }
+  margin: 50px 93px 0px 93px; }
   .contain .prior {
     margin-top: 20px;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
     width: auto;
-    border: 3px solid rgba(0, 0, 0, 0); }
+    padding: 3px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    font-family: Agenda Reg; }
 
 .sepration {
   margin: 20px auto; }
@@ -630,24 +641,25 @@
 .first-tile {
   background-color: black;
   color: white;
-  width: 224px;
-  height: 200px;
+  width: 221.5px;
+  height: 197.5px;
+  border: 5px solid black;
   font-size: 25px;
   letter-spacing: 0.23px;
   text-transform: uppercase;
-  padding: 35px 35px;
+  padding: 33px 35px;
   position: relative; }
 
 .description-1 {
   position: absolute;
   margin: 0;
-  top: -3px;
-  left: -3px;
+  top: -6px;
+  left: -6px;
   display: none;
   flex-flow: column nowrap;
   justify-content: center;
-  width: 103%;
-  height: 103%;
+  width: 107%;
+  height: 107%;
   padding: 33px 27px;
   color: #000000;
   font-size: 15px;
@@ -658,19 +670,550 @@
   .first-tile {
     background-color: black;
     color: white;
-    width: 300px;
+    width: 299px;
     height: 100px;
+    margin: 1px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.23px;
+    text-transform: uppercase;
+    padding: 16px 10px;
+    border: 5px solid black; }
+  .description-1 {
+    top: -6px;
+    left: -6px;
+    width: 301px;
+    height: 117%;
+    padding: 33px 27px; } }
+
+.pi-tile {
+  position: relative;
+  width: 100%;
+  height: 498px;
+  border: 5px solid #ededed; }
+  .pi-tile .pi-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    line-height: 18pt;
+    margin: 12px 15px; }
+  @media only screen and (max-width: 600px) {
+    .pi-tile .pi-tile {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      border: 0;
+      border-left: 5px solid #ededed;
+      border-right: 5px solid #ededed;
+      border-bottom: 5px solid #ededed; } }
+
+.tile-A {
+  border-top: 3px solid rgba(0, 0, 0, 0);
+  border-right: 3px solid rgba(0, 0, 0, 0);
+  padding-top: 3px;
+  height: 510px; }
+  @media screen and (max-width: 500px) {
+    .tile-A {
+      position: relative; } }
+
+.tile-A11 {
+  margin: -5px -15px;
+  padding: 3px 3px;
+  border: 3px solid rgba(0, 0, 0, 0); }
+
+.tile-A12 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  padding: 0px 3px 0px 32px;
+  padding-bottom: 3px; }
+  @media screen and (max-width: 500px) {
+    .tile-A12 {
+      position: absolute;
+      top: 502px;
+      padding: 6px;
+      width: 312px; } }
+
+.tile-A21 {
+  height: 298px;
+  padding-top: 5px;
+  border-right: 3px solid rgba(0, 0, 0, 0);
+  border-top: 3px solid rgba(0, 0, 0, 0);
+  margin-top: 4px; }
+  @media screen and (max-width: 500px) {
+    .tile-A21 {
+      position: absolute;
+      top: 1024px; } }
+
+.barContainer {
+  padding: 5px;
+  height: 382px;
+  width: 100%; }
+  @media screen and (max-width: 500px) {
+    .barContainer {
+      position: relative;
+      top: 1061px;
+      left: -2px;
+      width: 319px;
+      height: 621px; } }
+
+.plant-first-tile {
+  background-color: black;
+  color: white;
+  width: 221.5px;
+  height: 197.5px;
+  border: 5px solid black;
+  font-size: 25px;
+  letter-spacing: 0.23px;
+  text-transform: uppercase;
+  padding: 33px 35px;
+  position: relative; }
+  @media only screen and (max-width: 600px) {
+    .plant-first-tile {
+      background-color: black;
+      color: white;
+      width: 300px;
+      height: 100px;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 0.23px;
+      text-transform: uppercase;
+      padding: 16px 10px;
+      border: 5px solid black; } }
+  .plant-first-tile .plant-description-1 {
+    position: absolute;
+    margin: 0;
+    top: -7px;
+    left: -6.5px;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 107%;
+    height: 107%;
+    padding: 33px 27px;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    background-color: #EDEDED; }
+    @media only screen and (max-width: 600px) {
+      .plant-first-tile .plant-description-1 {
+        top: -6px;
+        left: -8px;
+        width: 305px;
+        height: 113%;
+        padding: 33px 27px; } }
+
+.bar-first-tile {
+  background-color: black;
+  color: white;
+  width: 221.5px;
+  height: 362px;
+  border: 5px solid black;
+  font-size: 25px;
+  letter-spacing: 0.23px;
+  text-transform: uppercase;
+  padding: 102px 35px;
+  position: relative;
+  display: inline; }
+
+.bar-description-1 {
+  position: absolute;
+  margin: 0;
+  top: -7px;
+  left: -7px;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 107%;
+  height: 366px;
+  padding: 33px 27px;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  background-color: #ededed; }
+
+@media only screen and (max-width: 600px) {
+  .bar-first-tile {
+    background-color: black;
+    display: block;
+    color: white;
+    width: 302px;
+    height: 100px;
+    margin: 3px;
     text-align: center;
     font-size: 25px;
     letter-spacing: 0.23px;
     text-transform: uppercase;
     padding: 16px 10px; }
-  .description-1 {
-    top: -3px;
-    left: -3px;
-    width: 300px;
-    height: 106%;
+  .bar-description-1 {
+    top: -6px;
+    left: -8px;
+    width: 306px;
+    height: 117%;
     padding: 33px 27px; } }
+
+.bar-tile {
+  position: relative;
+  width: 920px;
+  height: 364px;
+  border: 5px solid #ededed;
+  display: inline-block; }
+  .bar-tile .bar-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    line-height: 18pt;
+    margin: 12px 15px; }
+
+@media only screen and (max-width: 600px) {
+  .bar-tile {
+    position: relative;
+    display: block;
+    width: 305px;
+    height: 498px;
+    border: 0;
+    margin-top: -9px;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed; } }
+
+/* This CSS resource incorporates links to font software which is the
+   valuable copyrighted property of Type Network, Inc. and/or their
+   suppliers. You may not attempt to copy, install, redistribute,
+   convert, modify or reverse engineer this font software. Please
+   contact Type Network with any questions: www.typenetwork.com */
+@font-face {
+  font-family: "Agenda Med Ultra Cond";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29750/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29750/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29750/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29750/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Semi Bd";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29751/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29751/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29751/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29751/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Med It";
+  font-display: swap;
+  font-weight: normal;
+  font-style: italic;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29752/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29752/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29752/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29752/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Semi Bd Ultra Cond";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29803/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29803/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29803/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29803/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Reg";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29748/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29748/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29748/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29748/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Bd";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29749/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29749/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29749/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29749/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda It";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29804/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29804/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29804/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29804/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Reg Cond It";
+  font-display: swap;
+  font-weight: normal;
+  font-style: italic;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29805/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29805/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29805/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29805/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+@font-face {
+  font-family: "Agenda Reg Ultra Cond";
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29860/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077");
+  src: url("//cloud.typenetwork.com/projectLicenseWeb/29860/fontfile/eot/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077#iefix") format("embedded-opentype"), url("//cloud.typenetwork.com/projectLicenseWeb/29860/fontfile/woff2/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff2"), url("//cloud.typenetwork.com/projectLicenseWeb/29860/fontfile/woff/?7e62196f2a77e4c4c3e3bd75bcc595fc4041e077") format("woff"); }
+
+.plate-container {
+  width: 100%;
+  height: 733px;
+  border: 5px solid #ededed; }
+  .plate-container :not(:last-child) {
+    height: 92%; }
+  .plate-container :nth-child(2) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; }
+    .plate-container :nth-child(2) > p {
+      height: auto;
+      font-size: 25px;
+      font-family: Agenda It; }
+  .plate-container :last-child {
+    padding: 5px 20px 5px 20px;
+    height: 8%;
+    font-family: Agenda It;
+    font-size: 20px;
+    line-height: 35pt; }
+  @media only screen and (max-width: 600px) {
+    .plate-container {
+      width: 293px; }
+      .plate-container :nth-child(n) {
+        display: none; } }
+
+.square-pi {
+  position: relative;
+  width: 554px;
+  height: 446px;
+  margin: 4px 4px 2px 2px;
+  border: 5px solid #ededed; }
+  .square-pi:first-child {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    line-height: 18pt; }
+  @media only screen and (max-width: 600px) {
+    .square-pi {
+      position: relative;
+      width: 304px;
+      height: 446px;
+      border: 0;
+      top: 4px;
+      left: 2px;
+      border-left: 5px solid #ededed;
+      border-right: 5px solid #ededed;
+      border-bottom: 5px solid #ededed; } }
+
+.tile-B {
+  border-right: 3px solid rgba(0, 0, 0, 0);
+  padding-top: 3px;
+  height: 450px;
+  width: auto; }
+  @media screen and (max-width: 500px) {
+    .tile-B {
+      position: relative; } }
+  .tile-B .left-container {
+    border-top: 3px solid rgba(0, 0, 0, 0); }
+  .tile-B .tile-B11 {
+    margin: -2px -15px -5px -15px;
+    padding: 6px 0px 2px 6px;
+    border-left: 3px solid rgba(0, 0, 0, 0); }
+    @media screen and (max-width: 500px) {
+      .tile-B .tile-B11 {
+        position: relative;
+        margin: 0 -15px -13px -15px;
+        display: flex;
+        flex-flow: column; } }
+  .tile-B .tile-B12 {
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    border-top: 3px solid rgba(0, 0, 0, 0);
+    border-right: 3px solid rgba(0, 0, 0, 0);
+    padding: 0;
+    width: auto; }
+    @media screen and (max-width: 500px) {
+      .tile-B .tile-B12 {
+        position: relative;
+        height: 464px;
+        width: 318px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 18pt;
+        text-transform: uppercase;
+        line-height: 18pt;
+        margin-top: -4px;
+        border-left: 3px solid rgba(0, 0, 0, 0);
+        border-right: 3px solid rgba(0, 0, 0, 0);
+        border-bottom: 3px solid rgba(0, 0, 0, 0); } }
+  .tile-B .tile-B21 {
+    height: 250px;
+    padding-top: 10px;
+    border-top: 3px solid rgba(0, 0, 0, 0);
+    border-right: 3px solid rgba(0, 0, 0, 0);
+    margin-top: 4px; }
+    @media screen and (max-width: 500px) {
+      .tile-B .tile-B21 {
+        position: absolute;
+        top: 1024px; } }
+
+.wellness-bar-container {
+  position: relative;
+  margin-top: 50px;
+  width: 1144px;
+  height: 588px;
+  border: 3px solid rgba(0, 0, 0, 0); }
+  @media screen and (max-width: 500px) {
+    .wellness-bar-container {
+      padding: 5px;
+      width: 318px;
+      height: auto;
+      position: relative;
+      top: 1186px;
+      display: flex;
+      flex-flow: column nowrap; } }
+  .wellness-bar-container .bargraph-container {
+    display: inline-block;
+    border: 5px solid #ededed;
+    width: 900px;
+    height: 360px;
+    margin-top: 23px; }
+    @media screen and (max-width: 500px) {
+      .wellness-bar-container .bargraph-container {
+        margin-top: 0;
+        width: 304px;
+        height: 360px;
+        border-top: none;
+        position: relative;
+        left: -2px; } }
+
+.wellness-tile {
+  padding: 0;
+  width: 300px;
+  height: 200px;
+  border-top: 5px solid #ededed;
+  border-right: 5px solid #ededed;
+  border-bottom: 5px solid #ededed; }
+  .wellness-tile .wellness-title {
+    font-family: Agenda Bd;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin: 5px 15px; }
+  .wellness-tile .wellness-body {
+    position: relative;
+    display: flex;
+    top: 5px;
+    width: 100%;
+    font-size: 48px;
+    line-height: 39pt;
+    height: 136px;
+    flex-flow: column nowrap;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    margin-top: 5px; }
+    .wellness-tile .wellness-body .wellness-stat {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 31pt;
+      padding-top: 7px;
+      margin: 20px 0px 5px 0px;
+      border-top: 2px dashed #ededed;
+      color: black;
+      font-family: Agenda Bd;
+      font-style: normal;
+      line-height: 13pt;
+      text-transform: uppercase;
+      letter-spacing: 0; }
+    .wellness-tile .wellness-body .wellness-foot {
+      border-top: 0;
+      font-size: 13px;
+      margin-bottom: -10px;
+      margin-top: -2px;
+      font-weight: 600;
+      line-height: 13pt;
+      font-family: Agenda Bd;
+      font-style: normal;
+      text-transform: uppercase;
+      color: black; }
+  .wellness-tile .overlay-wellness {
+    position: absolute;
+    top: 50px;
+    left: 6px;
+    font-family: Agenda It;
+    display: none;
+    width: 98%;
+    height: 135px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    font-size: 15px;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding-bottom: 25px; }
+
+@media only screen and (max-width: 600px) {
+  .wellness-tile {
+    position: relative;
+    left: -2px;
+    width: 304px;
+    height: 200px;
+    border: 0;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed; } }
+
+.margin-15 {
+  margin: 0 15px; }
+
+.wellnessBar-first-tile {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  width: 221.5px;
+  height: 100%;
+  border: 5px solid black;
+  font-size: 25px;
+  letter-spacing: 0.23px;
+  text-transform: uppercase;
+  padding: 200px 24px;
+  position: relative; }
+  @media only screen and (max-width: 600px) {
+    .wellnessBar-first-tile {
+      background-color: black;
+      color: white;
+      width: 299px;
+      height: 100px;
+      margin: 1px;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 0.23px;
+      text-transform: uppercase;
+      padding: 16px 10px;
+      border: 5px solid black; } }
+  .wellnessBar-first-tile .wellnessBar-description-1 {
+    position: absolute;
+    margin: 0;
+    top: -5px;
+    left: -5px;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 107%;
+    height: 102%;
+    padding: 33px 27px;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0;
+    background-color: #EDEDED; }
+  .wellnessBar-first-tile .wellnessBar-description-1 {
+    top: -6px;
+    left: -6px;
+    width: 301px;
+    height: 117%;
+    padding: 33px 27px; }
 
 .dream-container .main-title {
   padding: 10px 100px;

@@ -1,11 +1,11 @@
-.percent-tile {
+.wellness-tile {
   padding: 0;
   width: 300px;
   height: 200px;
   border-top: 5px solid #ededed;
   border-right: 5px solid #ededed;
   border-bottom: 5px solid #ededed;
-  .percent-title {
+  .wellness-title {
     font-family: Agenda Bd;
     font-style: normal;
     font-size: 17px;
@@ -15,20 +15,19 @@
     letter-spacing: 0;
     margin: 5px 15px;
   }
-  .percent-body {
+  .wellness-body {
     position: relative;
     display: flex;
-    top: 10px;
+    top: 5px;
     width: 100%;
     font-size: 48px;
     line-height: 39pt;
-    height: 120px;
+    height: 136px;
     flex-flow: column nowrap;
     letter-spacing: 0;
-    color: #63bf87;
     text-transform: uppercase;
     margin-top: 5px;
-    .percent-stat {
+    .wellness-stat {
       width: 100%;
       font-size: 24px;
       font-weight: 600;
@@ -43,23 +42,28 @@
       text-transform: uppercase;
       letter-spacing: 0;
     }
-    .percent-foot {
+    .wellness-foot {
       @extend .percent-stat;
       border-top: 0;
       font-size: 13px;
-      margin-top: -10px;
+      margin-bottom: -10px;
+      margin-top: -2px;
       font-weight: 600;
       line-height: 13pt;
+      font-family: Agenda Bd;
+      font-style: normal;
+      text-transform: uppercase;
+      color: black;
     }
   }
-  .overlay-percent {
+  .overlay-wellness {
     position: absolute;
     top: 50px;
     left: 6px;
     font-family: Agenda It;
     display: none;
     width: 98%;
-    height: 136px;
+    height: 135px;
     background-color: white;
     color: black;
     z-index: 2;
@@ -70,13 +74,18 @@
   }
 }
 @media only screen and (max-width: 600px) {
-  .percent-tile {
+  .wellness-tile {
     position: relative;
-    width: 300px;
+    left: -2px;
+    width: 304px;
     height: 200px;
     border: 0;
     border-left: 5px solid #ededed;
     border-right: 5px solid #ededed;
     border-bottom: 5px solid #ededed;
   }
+}
+
+.margin-15 {
+  margin: 0 15px;
 }
