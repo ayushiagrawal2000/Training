@@ -1,0 +1,36 @@
+.contain {
+  margin: 50px 93px 0px 93px;
+  .prior {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 3px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    font-family: Agenda Reg;
+  }
+}
+.sepration {
+  margin: 20px auto;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .contain {
+      display: flex;
+      flex-flow: column wrap;
+      justify-self: center;
+      align-content: center;
+      .prior {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.bar-first-tile {
+  background-color: black;
+  color: white;
+  width: 221.5px;
+  height: 362px;
+  border: 5px solid black;
+  font-size: 25px;
+  letter-spacing: 0.23px;
+  text-transform: uppercase;
+  padding: 102px 35px;
+  position: relative;
+  display: inline;
+}
+.bar-description-1 {
+  position: absolute;
+  margin: 0;
+  top: -7px;
+  left: -7px;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 107%;
+  height: 366px;
+  padding: 33px 27px;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  background-color: #ededed;
+}
+@media only screen and (max-width: 600px) {
+  .bar-first-tile {
+    background-color: black;
+    display: block;
+    color: white;
+    width: 302px;
+    height: 100px;
+    margin: 3px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.23px;
+    text-transform: uppercase;
+    padding: 16px 10px;
+  }
+  .bar-description-1 {
+    top: -6px;
+    left: -8px;
+    width: 306px;
+    height: 117%;
+    padding: 33px 27px;
+  }
+}

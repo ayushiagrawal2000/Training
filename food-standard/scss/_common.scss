@@ -1,9 +1,11 @@
 .common-section {
     color: $font-color;
     background-color: $strip-black;
+    position: -webkit-sticky;
+    overflow-y:scroll;
+    overflow-x:hidden;
     .text {
-        margin-left: 85px;
-        padding: 10px;
+        margin-left: $view-width;
         @media screen and (max-width: 500px) {
             margin-left: 40px;
         }
@@ -12,7 +14,8 @@
 .paragraph-container {
     background: $background;
     font-style: italic;
-    padding: 15px 85px;
+    
+    padding: 15px $view-width;
     @media screen and (max-width: 500px) {
         padding: 15px 40px;
     }

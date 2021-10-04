@@ -9,6 +9,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../output/css/style.css">
+    <link rel="stylesheet" href="../output/css/cafebonappetit.css">
+    <!-- Script For Climate page -->
+    <script src="./js/climate.js"></script>
 </head>
 <body>
     
@@ -16,12 +19,12 @@
 
 <div class="header">
     <div class="header-logo-container">
+        <i class="fas fa-arrow-circle-left"></i>
         <div class="header-logo">
-            <i class="fas fa-arrow-circle-left"></i>
             TEMPLTES 25555
         </div>
-        <div class="header-logo-text">
-            <div class="header-logo-text1">FY: 21 PERIOD: 6 <i class="fas fa-chevron-circle-down"></i></div>
+        <div class="logo-subtext" >
+            <div class="header-logo-text1">FY: 21 PERIOD: 6<i class="fas fa-chevron-circle-down"></i></div>
             <div class="header-logo-text2">02/26/2021 - 03/25/2021</div>
         </div>    
     </div>
@@ -90,11 +93,11 @@
 
 
 
-<div class="common-section">
-    <div class="text">FLAVOR FIRST PURCHASING STRATEGY</div>
+<div class="common-section ">
+    <div class="text ">FLAVOR FIRST PURCHASING STRATEGY</div>
 </div>
-<div class="paragraph-container">
-    <div class="paragraph">
+<div class="paragraph-container ">
+    <div class="paragraph ">
         &ldquo;Flavor First is Bon Appetit's purchasing strategy. There are three objectives: 100% Adherence to our COR Initiatives and Food Standards, buy 20% of our food from qualified Farm to Fork vendors, and for everything else, buying preferred products through preferred suppliers.&rdquo;
     </div>
 </div>
@@ -126,7 +129,6 @@
     </div>
 </div>
 
-
 <div class="purchases-container">
     <div class="row">
         <div class="chart-title purchase col-lg-2">
@@ -152,8 +154,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="suppliers">
     <div class="row">
         <div class="chart-title supplier col-lg-2">
@@ -197,7 +197,6 @@
         </div>
     </div>
 </div>
-
 <div class="details-container">
     <div class="show-details-on-hover">
         <div class="col-lg-2 col-xs-5">
@@ -231,7 +230,12 @@
     </div>
 </div>
 
-
 <script src="../output/js/script.js"></script>
+<script>
+    window.onload = () => {
+        const climate = new Climate();
+        climate.initialise();
+    }
+</script>
 </body>
 </html>

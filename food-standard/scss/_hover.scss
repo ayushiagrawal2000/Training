@@ -1,50 +1,50 @@
 .charts {
-    height: 60px;
-    border-radius: 50%;
-    border: 5px solid green;
-    @media screen and (max-width: 500px) {
-        display: inline-block;
-        float: none;
-        margin: 10px;
-    }
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid green;
+  @media screen and (max-width: 500px) {
+    display: inline-block;
+    float: none;
+    margin: 10px;
+  }
 }
 .details-container {
-    display: none;
+  display: none;
 }
 .show-details-on-hover {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    display: inline-block;
+  }
+  div {
+    margin: 10px 0px;
     @media screen and (max-width: 500px) {
-        display: inline-block;
-     }
-    div {
-        margin: 10px 0px;
-        @media screen and (max-width: 500px) {
-            margin: 5px 0px ;
-            display: inline-block;
-            float: none;
-        }
+      margin: 5px 0px;
+      display: inline-block;
+      float: none;
     }
-    .hidden-content {
-        display: none;
-        @media screen and (max-width: 500px) {
-            display: inline-block;
-        }
+  }
+  .hidden-content {
+    display: none;
+    @media screen and (max-width: 500px) {
+      display: inline-block;
     }
-    .title {
-        font-weight: bold;
-        font-size: 10px;
-    }
-    .description {
-        font-size: 10px;
-        @media screen and (max-widht: 500px) {
-            font-size: 5px;
-            margin: 5px 0px 10px;
-        }
-    }
-}    
-.description-on-hover {
+  }
+  .title {
+    font-weight: bold;
     font-size: 10px;
+  }
+  .description {
+    font-size: 10px;
+    @media screen and (max-widht: 500px) {
+      font-size: 5px;
+      margin: 5px 0px 10px;
+    }
+  }
+}
+.description-on-hover {
+  font-size: 10px;
 }

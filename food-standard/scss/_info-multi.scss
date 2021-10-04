@@ -1,0 +1,77 @@
+.multi-tile {
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  border-top: 5px solid #ededed;
+  border-right: 5px solid #ededed;
+  border-bottom: 5px solid #ededed;
+  .multi-title {
+    font-family: Agenda Bd;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin: 5px 15px;
+  }
+  .bg-green {
+    background-color: #63bf87;
+    color: #ffffff;
+    border: 0;
+  }
+  .multi-body {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-transform: uppercase;
+    .multi-group {
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 0px;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+    .multi-units {
+      display: flex;
+      width: 120px;
+      height: 38px;
+      border: 2px solid #ededed;
+      font-size: 11px;
+      line-height: 11pt;
+      margin: 5px 5px;
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+  }
+  .overlay-multi {
+    position: absolute;
+    top: 25px;
+    left: 6px;
+    font-family: Agenda It;
+    display: none;
+    width: 98%;
+    height: 156px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    font-size: 15px;
+    justify-content: center;
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .multi-tile {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 0;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed;
+  }
+}
