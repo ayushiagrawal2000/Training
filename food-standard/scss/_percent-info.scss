@@ -1,0 +1,82 @@
+.percent-tile {
+  padding: 0;
+  width: 300px;
+  height: 200px;
+  border-top: 5px solid #ededed;
+  border-right: 5px solid #ededed;
+  border-bottom: 5px solid #ededed;
+  .percent-title {
+    font-family: Agenda Bd;
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 18pt;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin: 5px 15px;
+  }
+  .percent-body {
+    position: relative;
+    display: flex;
+    top: 10px;
+    width: 100%;
+    font-size: 48px;
+    line-height: 39pt;
+    height: 120px;
+    flex-flow: column nowrap;
+    letter-spacing: 0;
+    color: #63bf87;
+    text-transform: uppercase;
+    margin-top: 5px;
+    .percent-stat {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 31pt;
+      padding-top: 7px;
+      margin: 20px 0px 5px 0px;
+      border-top: 2px dashed #ededed;
+      color: black;
+      font-family: Agenda Bd;
+      font-style: normal;
+      line-height: 13pt;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    .percent-foot {
+      @extend .percent-stat;
+      border-top: 0;
+      font-size: 13px;
+      margin-top: -10px;
+      font-weight: 600;
+      line-height: 13pt;
+    }
+  }
+  .overlay-percent {
+    position: absolute;
+    top: 50px;
+    left: 6px;
+    font-family: Agenda It;
+    display: none;
+    width: 98%;
+    height: 136px;
+    background-color: white;
+    color: black;
+    z-index: 2;
+    font-size: 15px;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .percent-tile {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 0;
+    border-left: 5px solid #ededed;
+    border-right: 5px solid #ededed;
+    border-bottom: 5px solid #ededed;
+  }
+}

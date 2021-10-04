@@ -1,0 +1,29 @@
+@import "_variables";
+.section-container {
+    padding: 20px $padding-left 0px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 500px) {
+        display: block;
+        padding: 20px 30px 0px;
+    }
+    .chart-title {
+        background-color: $strip-black;
+        color: $font-color;
+        display: flex;  
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .description {
+       background: $background;
+       padding: 20px;
+       margin-left: 20px;
+       @media screen and (max-width: 500px) {
+           margin-left: 0px;
+           margin-top: 5px;
+           font-size: 10px;
+        }
+    }
+}

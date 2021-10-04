@@ -1,0 +1,76 @@
+@import "_variables";
+@import "_hover";
+.chart-section-container {
+    border: 3px solid white;
+    margin: 20px 100px;
+    padding: 2px;
+    @media screen and (max-width: 500px) {
+        margin: 20px 40px;
+    }
+    .row {
+        margin: 0;
+        display: flex;
+        @media screen and (max-width: 500px) {
+            display: block;
+        }
+        .blocks-section1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 5px solid $border-dark;
+            margin-left: 2px;
+            height: 140px;
+        }
+        .blocks-section2 {
+            border: 5px solid $border-dark;
+            margin-left: 2px;
+            text-align: center;
+            position: relative;
+            padding: 0;
+            .charts-container {
+               .row {
+                    margin: 10px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: space-between;
+                    @media screen and (max-width: 500px) {
+                        display: block;
+                        height: 380px;
+                    }
+                }         
+            }
+            i {
+                float: right;
+                margin: 5px;
+            }
+        }
+    }
+}
+.chart-title {
+    background-color: $strip-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $font-color;
+    padding: 20px;
+    position: relative;
+    @media screen and (max-width: 500px) {
+        height: 130px;
+    }
+}
+.heading {
+    margin-top: 5px;
+}
+.info-icon {
+    color: gray;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    display: none;
+    @media screen and(max-width: 500px) {
+        display: block;
+    }
+}

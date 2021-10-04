@@ -1,0 +1,49 @@
+.purchases-container {
+    border: 3px solid white;
+    margin: 20px 100px;
+    padding: 2px;
+    @media screen and (max-width: 500px) {
+        margin: 20px 40px;
+    }
+    .row {
+        margin: 0;
+        display: flex;
+        @media screen and (max-width: 500px) {
+        display: block;
+        }
+    }
+    .purchase-chart {
+        border: 5px solid $border-dark;
+        text-align: center;
+        padding: 15px;
+        margin-left: 2px;
+        position: relative;
+        height: 270px;
+        @media screen and (max-width: 500px) {
+            height: 170px;
+        }
+        .charts {
+           margin: 10px;
+           display: inline-block;
+           float: none;
+           width: 60px;
+        }
+    }
+    .purchase-graph-container {
+        border: 5px solid $border-dark;
+        margin-left: 2px;
+        text-align: center;
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+}
+.chart-description {
+    visibility: hidden;
+ }
+ .charts-wrapper {
+    @media screen and (max-width: 500px) {
+        display: flex;
+        justify-content: center;
+    }
+ }

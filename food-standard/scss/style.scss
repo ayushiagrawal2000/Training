@@ -1,0 +1,88 @@
+@import "_header";
+@import "_progress-bar";
+@import "_repeated-section";
+@import "_chart-section";
+@import "_chart-section2";
+@import "_chart-section3";
+@import "_common";
+@import "_variables";
+@import "_info-box";
+@import "_percent-info";
+@import "_info-multi";
+@import "_climate";
+@import "_first-tile";
+@import "_pichart.scss";
+@import "_plant.scss";
+@import "_plantFirst.scss";
+@import "_barFirst.scss";
+@import "_barGraph.scss";
+@import "fonts.scss";
+@import "_wellness.scss";
+@import "_wellnessStat.scss";
+@import "_wellnessBarTile1.scss";
+.dream-container {
+    .main-title {
+        padding: 10px $padding-left;
+        background-color: $strip-black;
+        color: $font-color;
+        font-size: $font-size;
+        @media screen and (max-width: 500px) {
+            padding: 10px 20px;
+            font-size: 12px;
+        }
+    }
+    .paragraph {
+       text-align: center;
+       padding: 40px $padding-left;
+       font-style: italic;
+       font-size: $font-size;
+       line-height: 30px;
+       @media screen and (max-width: 500px) {
+           padding: 20px 20px;
+           line-height: 20px;
+           text-align: left;
+           background: $background;
+           font-size: 12px;
+        }
+    }
+    .tabs-icon {
+        margin-bottom: 40px;
+        display: flex;
+        padding: 0px 130px;
+        justify-content: space-between;
+        text-align: center;
+        @media screen and (max-width: 500px) {
+            margin: 25px;
+            display: block;
+            padding: 0px;
+        }
+        div {
+            width: 180px;
+            height: 180px;
+            border: 5px solid $border-dark;
+            text-align: center;
+            @media screen and (max-width: 500px) {
+                width: 140px;
+                height: 140px;
+                display: inline-block;
+                float: none;
+                margin: 0px 0px 10px 10px;
+            }
+            i {
+                color: $strip-black;
+                margin-top: 40px;
+                font-size: 60px;
+                @media screen and (max-width: 500px) {
+                    margin-top: 25px;
+                    font-size: 50px;
+                }
+            }
+            p {
+                font-weight: bold;
+                @media screen and (max-width: 500px) {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+}
